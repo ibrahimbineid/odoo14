@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     <!-- === Ticket Status Page === -->
+    <record id="ticket_status_page" model="website.page">
+        <field name="name">Ticket Status</field>
+        <field name="website_published">True</field>
+        <field name="url">/ticketstatus</field>
+        <field name="type">qweb</field>
+        <field name="key">Helpdesk_Dashboard_Std.services_page</field>
+        <field name="arch" type="xml">
+            <t t-name="Helpdesk_Dashboard_Std.ticket_status_page_template">
+              
+                    <div id="wrap">
+<!--                        <t t-call="Helpdesk_Dashboard_Std.ticket_status_top_img" />-->
+                        
+                        <t t-call="helpdesk.portal_my_home_helpdesk_ticket" />
+                    </div>
+              
+            </t>
+        </field>
+    </record>
+
+ </odoo>

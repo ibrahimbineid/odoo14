@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_region,maintenance_region,model_maintenance_region,,1,1,1,1
+access_maintenance_city,maintenance_city,model_maintenance_city,,1,1,1,1
+access_maintenance_location,maintenance_location,model_maintenance_location,,1,1,1,1

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--region form-->
+    <record id="maintenance_region_form" model="ir.ui.view">
+        <field name="name">maintenance.region.form</field>
+        <field name="model">maintenance.region</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Region"/>
+                        </group>
+                        <group>
+                            <field name="abbreviation" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_region_tree" model="ir.ui.view">
+        <field name="name">maintenance.region</field>
+        <field name="model">maintenance.region</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Region"/>
+                <field name="abbreviation" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="region_action" model="ir.actions.act_window">
+    <field name="name">Manage Region</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.region</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+
+<!--    city form-->
+    <record id="maintenance_city_form" model="ir.ui.view">
+        <field name="name">maintenance.city.form</field>
+        <field name="model">maintenance.city</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="region_id" />
+                            <field name="name" string="City"/>
+                        </group>
+                        <group>
+                            <field name="abbreviation" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_city_tree" model="ir.ui.view">
+        <field name="name">maintenance.city</field>
+        <field name="model">maintenance.city</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="region_id" />
+                <field name="name" string="City"/>
+                <field name="abbreviation" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="city_action" model="ir.actions.act_window">
+    <field name="name">Manage City</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.city</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+
+
+<!--    location form-->
+    <record id="maintenance_location_form" model="ir.ui.view">
+        <field name="name">maintenance.location.form</field>
+        <field name="model">maintenance.location</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="region_id" />
+                            <field name="city_id" />
+                        </group>
+                        <group>
+                            <field name="name" string="Location"/>
+                            <field name="abbreviation" />
+                        </group>
+                        <group>
+                            <field name="site_type_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_location_tree" model="ir.ui.view">
+        <field name="name">maintenance.location</field>
+        <field name="model">maintenance.location</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="region_id" />
+                <field name="city_id" />
+                <field name="name" string="Location"/>
+                <field name="abbreviation" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="location_action" model="ir.actions.act_window">
+    <field name="name">Manage Location</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">maintenance.location</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="region_menu" name="Manage Region"
+              parent="maintenance.menu_maintenance_configuration"
+              action="region_action" sequence="20"/>
+    <menuitem id="city_menu" name="Manage City"
+              parent="maintenance.menu_maintenance_configuration"
+              action="city_action" sequence="30"/>
+    <menuitem id="location_menu" name="Manage Locations"
+              parent="maintenance.menu_maintenance_configuration"
+              action="location_action" sequence="40"/>
+
+
+
+
+
+</odoo>

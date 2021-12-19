@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="petrolling_list_details" name="Petrolling Details">
+          <t t-call="website.layout">
+        <div id="wrap" style="margin-top:30px;padding-bottom:50px;">
+        <t>
+           <div class="container petrolling-stage">
+             <div class="table-responsive mt25">
+                <table class="table table-bordered" style="background-color:#fff;">
+                            
+                    <thead>
+                        <tr><th colspan="8" style="text-align:center;font-weight:bold;background-color:#875a7b;color:#fff;font-size:18px;">Petrolling</th></tr>
+                    <tr style="text-align:center;">
+                        <th>Reference Name</th>
+                        <th>Site Group</th>
+                        <th>Date</th>
+                        <th>User</th>
+                        <th>Employee</th>
+                        <th>Region</th>
+                        <th>Status</th>
+                        <th>Site</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+        <t t-foreach="my_details" t-as="line">
+            <tr style="text-align:center;">
+            <td><span t-esc="line.ref_name"/></td>
+            <td><span t-esc="line.site_group_id.name"/></td>
+            <td><span t-esc="line.date" t-options='{"widget": "date"}'/></td>
+            <td><span t-esc="line.user_id.name"/></td>
+            <td><span t-esc="line.employee_id.name"/></td>
+            <td><span t-esc="line.sites_region.name"/></td>
+            <td><input type="checkbox" t-att-checked="line.ck_status"/></td>
+            <td><t t-foreach="line.site_id" t-as="site"><span t-esc="site.name" /><span class="vline">|</span> 
+        </t></td>
+            </tr>
+        </t>
+
+                    </tbody>
+                    
+                </table>
+            </div>
+            </div>
+                           
+                          
+        </t>
+        </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="contacts_list_details" name="Contacts Details">
+          <t t-call="website.layout">
+        <div id="wrap" style="margin-top:30px;padding-bottom:50px;">
+        <t>
+           <div class="container petrolling-stage">
+       
+             <div class="mt25 table-responsive">
+                <table class="table table-bordered" style="background-color:#fff;word-break: break-all;">
+                            
+                    <thead>
+                        <tr><th colspan="6" style="text-align:center;font-weight:bold;background-color:#875a7b;color:#fff;font-size:18px;">Contacts</th></tr>
+                    <tr style="text-align:center;">
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Company</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+        <t t-foreach="my_details" t-as="line">
+            <tr style="text-align:center;">
+            <td><span t-esc="line.display_name"/></td>
+            <td><span t-esc="line.phone"/></td>
+            <td><span t-esc="line.email"/></td>
+            <td><span t-esc="line.city"/></td>
+            <td><span t-esc="line.country_id.name"/></td>
+            <td><span t-esc="line.company_id.name"/></td>
+            </tr>
+        </t>
+
+                    </tbody>
+                    
+                </table>
+            </div>
+
+            </div>
+                           
+                          
+        </t>
+        </div>
+        </t>
+    </template>
+</odoo>

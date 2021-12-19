@@ -1,0 +1,231 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_updates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-18 08:33+0000\n"
+"PO-Revision-Date: 2021-11-18 08:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__abbreviation
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__abbreviation
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__abbreviation
+msgid "Abbreviation"
+msgstr "الاختصار"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__team_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_ticket_view_form_inherit
+msgid "CM Team"
+msgstr ""
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__city_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__city_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__city_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__city_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_tickets_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_city_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_city_tree
+msgid "City"
+msgstr "المدينة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields.selection,name:helpdesk_updates.selection__maintenance_request__maintenance_type__corrective
+msgid "Corrective"
+msgstr "تصحيحي"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__create_uid
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__create_uid
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__create_uid
+msgid "Created by"
+msgstr "تم انشائها بواسطة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__create_date
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__create_date
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__create_date
+msgid "Created on"
+msgstr "تم انشائها في"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__display_name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__display_name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__display_name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "تذكرة مكتب المساعدة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city____last_update
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location____last_update
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region____last_update
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__write_uid
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__write_uid
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__write_date
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__write_date
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__location_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__location_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__location_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_tickets_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_location_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_location_tree
+msgid "Location"
+msgstr "الموقع"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "معدات الصيانة"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "طلب الصيانة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__maintenance_type
+msgid "Maintenance Type"
+msgstr "نوع الصيانة"
+
+#. module: helpdesk_updates
+#: model:ir.actions.act_window,name:helpdesk_updates.city_action
+#: model:ir.ui.menu,name:helpdesk_updates.city_menu
+msgid "Manage City"
+msgstr "إدارة مدينة"
+
+#. module: helpdesk_updates
+#: model:ir.actions.act_window,name:helpdesk_updates.location_action
+msgid "Manage Location"
+msgstr "إدارة المواقع"
+
+#. module: helpdesk_updates
+#: model:ir.ui.menu,name:helpdesk_updates.location_menu
+msgid "Manage Locations"
+msgstr "إدارة المواقع"
+
+#. module: helpdesk_updates
+#: model:ir.actions.act_window,name:helpdesk_updates.region_action
+#: model:ir.ui.menu,name:helpdesk_updates.region_menu
+msgid "Manage Region"
+msgstr "إدارة المنطقة"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__name
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_region__name
+msgid "Name"
+msgstr "الأسم"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields.selection,name:helpdesk_updates.selection__maintenance_request__maintenance_type__preventive
+msgid "Preventive"
+msgstr "وقائية"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__region_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_city__region_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__region_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__region_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__region_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_tickets_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_region_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.maintenance_region_tree
+msgid "Region"
+msgstr "المنطقة"
+
+#. module: helpdesk_updates
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_category_view_form_inherit
+msgid "Site"
+msgstr "الموقع"
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__maintenance_equipment_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__equipment_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_tickets_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_request_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_view_form_inherit
+msgid "Site Name"
+msgstr " اسم الموقع "
+
+#. module: helpdesk_updates
+#: model:ir.model.fields,field_description:helpdesk_updates.field_helpdesk_ticket__maintenance_equipment_category_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_equipment__category_id
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_location__site_type_ids
+#: model:ir.model.fields,field_description:helpdesk_updates.field_maintenance_request__category_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.helpdesk_tickets_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_request_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_request_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_updates.hr_equipment_view_search_inherit
+msgid "Site Type"
+msgstr "نوع الموقع"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_maintenance_city
+msgid "maintenance.city"
+msgstr "مدينة الصيانة"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_maintenance_location
+msgid "maintenance.location"
+msgstr "موقع الصيانة"
+
+#. module: helpdesk_updates
+#: model:ir.model,name:helpdesk_updates.model_maintenance_region
+msgid "maintenance.region"
+msgstr "منطقة الصيانة"
+
+#. module: maintenance
+#: model:ir.ui.menu,name:maintenance.menu_maintenance_title
+msgid "PM"
+msgstr "الصيانة الوقائية"
+
+#. module: helpdesk
+#: model:ir.ui.menu,name:helpdesk.menu_helpdesk_root
+msgid "CM"
+msgstr "الصيانة التصحيحية"

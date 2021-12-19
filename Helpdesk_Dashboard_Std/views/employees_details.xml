@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="employees_list_details" name="Employees Details">
+          <t t-call="website.layout">
+        <div id="wrap" style="margin-top:30px;padding-bottom:50px;">
+        <t>
+           <div class="container petrolling-stage">
+            
+             <div class="table-responsive mt25">
+                <table class="table table-bordered" style="background-color:#fff;word-break: break-all;">
+                            
+                    <thead>
+                        <tr><th colspan="7" style="text-align:center;font-weight:bold;background-color:#875a7b;color:#fff;font-size:18px;">Employees</th></tr>
+                    <tr style="text-align:center;">
+                        <th style="width:20%;">Employee Name</th>
+                        <th style="width:15%;">Work Phone</th>
+                        <th>Work Email</th>
+                        <th style="width:25%;">Company</th>
+                        <th style="width:15%;">Department</th>
+                        <th style="width:15%;">Job Position</th>
+                        <th style="width:15%;">Manager</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+        <t t-foreach="my_details" t-as="line">
+            <tr style="text-align:center;">
+            <td><span t-esc="line.name"/></td>
+            <td><span t-esc="line.work_phone"/></td>
+            <td><span t-esc="line.work_email"/></td>
+            <td><span t-esc="line.company_id.name"/></td>
+            <td><span t-esc="line.department_id.name"/></td>
+            <td><span t-esc="line.job_title"/></td>
+            <td><span t-esc="line.parent_id.name"/></td>
+            </tr>
+        </t>
+
+                    </tbody>
+                    
+                </table>
+            </div>
+     
+            </div>
+                           
+                          
+        </t>
+        </div>
+        </t>
+    </template>
+</odoo>

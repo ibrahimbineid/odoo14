@@ -1,0 +1,812 @@
+.banner {
+	background: #fff;
+	background-size:auto 100%;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 20px;
+	  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.banner {
+/*
+  -webkit-animation: background 30s cubic-bezier(1,0,0,1) infinite;
+  animation: background 30s cubic-bezier(1,0,0,1) infinite;  
+*/
+    background-color: #6b60ab !important;
+}
+
+.panel-default {
+    border-color: #ddd !important;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.panel-body {
+    padding: 10px;
+}
+
+.banner h1 {
+    font-size: 50px !important;
+    margin: 24px 0;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #45429a;
+    border-color: #2d2b60;
+}
+
+.amb-tc h2 {
+    text-align: center;
+    border-bottom: 2px solid #1c815e;
+    padding: 10px 0;
+    background: #2bc08d;
+    color: #fff;
+    margin: 0;
+}
+
+.amb-tc p {
+    padding: 25px 15px;
+    min-height: 100px;
+    background: #fff;
+    color: #878787;
+}
+
+
+.text-heading2 {
+    background: #00b0de !important;
+    border-bottom: 2px solid #3061a3 !important;
+}
+
+.text-heading3 {
+    background: #45429a !important;
+    border-bottom: 2px solid #151446 !important;
+}
+
+.helpdesk-img
+{
+    margin-bottom: 20px;
+}
+
+.helpdesk-img img
+{
+    width: 100%;
+}
+
+.helpdesk-box
+{
+    min-height: 230px;
+    max-height: 230px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 60%);
+    border-radius: 5px;
+}
+
+.visible-lg, .visible-md, .visible-sm, .visible-xs {
+    display: none!important;
+}
+
+.ptick {
+    color: #529760;
+}
+
+.info-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: -5px 5px 15px rgb(0 0 0 / 60%);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.o_rtl .info-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 60%);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.bg-aqua {
+    background-color: #00c0ef !important;
+}
+
+.info-box-icon {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: right;
+    height: 90px;
+    width: 65px;
+    text-align: center;
+    font-size: 45px;
+    background: rgba(0,0,0,0.2);
+}
+
+.o_rtl .info-box-icon {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: left;
+    height: 90px;
+    width: 65px;
+    text-align: center;
+    font-size: 45px;
+    background: rgba(0,0,0,0.2);
+}
+
+.fa-users {
+    color: #fff;
+    font-size: 25px;
+    padding-top: 32px;
+    display: block;
+}
+
+.info-box-content {
+    padding: 20px 10px;
+    margin-right: 70px;
+}
+
+.o_rtl .info-box-content {
+    padding: 20px 10px;
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.info-box-text {
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+.info-box-text {
+    text-transform: uppercase;
+}
+
+.info-box-text
+{
+        padding-top: 15px !important;
+    display: inline-block;
+}
+
+.info-box-number
+{
+        font-size: 25px !important;
+    font-weight: bold !important;
+    float: left;
+    display: block;
+    padding-top: 30px;
+}
+
+.o_rtl .info-box-number
+{
+        font-size: 25px !important;
+    font-weight: bold !important;
+    float: right;
+    display: block;
+    padding-top: 30px;
+}
+
+body
+{
+/*    background-color: #875a7b52;*/
+    background: url(/Helpdesk_Dashboard_Std/static/src/img/helpdesk-bg.svg), linear-gradient(to left bottom, #77717e, #c9a8a9);
+    background-size: cover;
+}
+
+.ptb
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.block1
+{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.block3
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bg-2
+{
+    background: #cb6483;
+}
+
+.bg-3
+{
+    background: #d68b5f;
+}
+
+.bg-4
+{
+    background: #c0b66e;
+}
+
+.b1
+{
+    border-bottom: 2px solid #00c0ef;
+}
+
+.b2
+{
+    border-bottom: 2px solid #cb6483;
+}
+
+.b3
+{
+    border-bottom: 2px solid #d68b5f;
+}
+
+.b4
+{
+    border-bottom: 2px solid #c0b66e;
+}
+
+.ticket-status-top-img
+{
+    background: url(/Helpdesk_Dashboard_Std/static/src/img/ticket-status-top-img.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 200px;
+}
+
+.homepage footer
+{
+    background: #383E45;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    display: block !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #875a7b !important;
+    border-color: #875a7b !important;
+}
+
+.btn-fill-primary:hover, .btn-primary:hover {
+    color: #FFFFFF;
+    background-color: #875a7b !important;
+    border-color: #875a7b !important;
+}
+
+.modal-dialog
+{
+    margin-top: 30px !important;
+}
+
+.o_portal footer
+{
+    background: #383E45;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    display: block !important;
+}
+
+.helpdesk-ticket-submit-forms
+{
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 35px !important;
+    border-radius: 5px;
+    border-left: 3px solid #875a7b;
+    margin: 15px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.helpdesk-ticket-submit-forms .fa-check-circle
+{
+    font-size: 25px;
+}
+
+.helpdesk-ticket-submit-forms .ytn
+{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.helpdesk-ticket-submit-forms .ty
+{
+    font-size: 30px;
+    padding-left: 45px;
+}
+
+.o_connected_user footer
+{
+    background: #383E45;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+    display: block !important;
+}
+
+.ticket-submit
+{
+    padding: 25px;
+}
+
+.ticket-submit img
+{
+    padding: 10px;
+    width: 100%;
+    height: 400px;
+}
+
+.o_connected_user .col-md-9
+{
+    background: #fff;
+}
+
+.o_connected_user .col-md-3
+{
+    background: #fff;
+    padding: 25px;
+}
+
+.o_connected_user h2
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.o_connected_user #website_published_button
+{
+    display: none;
+}
+
+.o_connected_user .s_website_form_send
+{
+    width: 30%;
+}
+
+.o_connected_user .col-md-9 .col-form-label
+{
+    width: 140px !important;
+}
+
+.o_connected_user .col-md-9 .s_website_form_label
+{
+    width: 140px !important;
+}
+
+.js_language_selector .btn
+{
+    color: #fff !important;
+}
+
+.js_language_selector span
+{
+    font-size: 16px !important;
+}
+
+.o_rtl .dropdown-menu{
+    left: unset !important;
+}
+
+#promote-menu
+{
+    display: none;
+}
+
+.dht-card
+{
+    margin-top: 10px !important;
+}
+
+.dmb10
+{
+    margin-bottom: 10px;
+}
+
+.dmb5
+{
+    margin-bottom: 5px;
+}
+
+.dpl
+{
+    padding-left: 10px;
+}
+
+.dborder
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.fa-dot-circle-o
+{
+    color: darkgreen;
+    padding-right: 5px;
+}
+
+.o_rtl  .fa-dot-circle-o {
+    color: darkgreen;
+    padding-left: 5px;
+}
+
+.dst
+{
+    color: darkgreen;
+    font-weight: 700;
+}
+
+.dht-card span[itemprop="email"]
+{
+        word-break: break-all;
+}
+
+.helpdesk_rtl
+{
+    direction: rtl;
+}
+
+.helpdesk-box
+{
+    text-align: right;
+}
+
+.footer_rtl
+{
+    direction: rtl;
+}
+
+.o_rtl .helpdesk_rtl
+{
+    direction: ltr;
+}
+
+.o_rtl .helpdesk-box
+{
+    text-align: left;
+}
+
+.o_rtl .footer_rtl
+{
+    direction: ltr;
+}
+
+.vline:last-child
+{
+    display: none;
+}
+
+.region-name
+{
+    background-color: #c4dca9;
+    color: #fff;
+/*
+    padding-top: 10px !important;
+    padding-bottom: 40px !important;
+*/
+    border-radius: 5px;
+    font-size: 20px;
+/*    width: 45%;*/
+    display: block;
+    text-align: center;
+    border: 2px solid #5c874c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.region-values
+{
+    background-color: #fff;
+/*    width: 45%;*/
+    border-radius: 5px;
+/*
+    padding-top: 25px;
+    padding-bottom: 25px;
+*/
+    text-align: center;
+    border: 2px solid #afbb90;
+/*    position: relative;*/
+    display: block;
+    z-index: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*
+.region-ml
+{
+    margin-left: -20px;
+    margin-top: -25px;
+    margin-right: 20px;
+}
+*/
+
+.amal
+{
+    background-color: #c4dca9;
+    padding-top: 5px !important;
+    display: inline-block;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 5px !important;
+    border: 2px solid #5c874c;
+    border-radius: 5px;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: 20px;
+    transition: margin 0.25s ease-out;
+    width: 250px;
+    background-color: #c4dca9 !important;
+}
+
+.mol
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.mol h5
+{
+    margin-top: 15px;
+}
+
+.mol span {
+    background-color: #539e39;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.region-table .table-bordered th 
+{
+    border: 1px solid #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    vertical-align:middle !important;
+    text-align: center;
+    background-color: #539e39;
+    color: #fff;
+}
+
+.region-table .table-bordered td{
+    border: 1px solid #fff;
+    font-size: 16px;
+    padding-top:3px !important;
+    padding-bottom: 3px !important;
+    vertical-align:middle !important;
+    text-align: center;
+    white-space: nowrap;
+    color: #3d4e46;
+          
+}
+
+.maps img
+{
+    margin-top: -68px;
+}
+
+.hrvlines
+{
+    background: #000;
+    width: 113%;
+    position: absolute;
+    top: -6px;
+    left: 17%;
+}
+
+.rvline
+{
+    font-size: 0;
+    width: 1px;
+    height: 60px;
+    color: #fff;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.all-stages a:hover
+{
+    text-decoration: none;
+}
+
+.pm-stage .info-box-text
+{
+    color: #267372;
+}
+
+.pm-stage .info-box-number
+{
+    color: #267372;
+}
+
+.petrolling-stage .table
+{
+    margin-bottom: 0px;
+}
+
+.petrolling-stage .table-bordered th, .petrolling-stage .table-bordered td
+{
+    border: 1px solid #000;
+}
+
+.petrolling-stage .table-bordered td
+{
+    vertical-align: middle;
+}
+
+@media print {
+    .region-table
+    {
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+    .amal-title
+    {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 381px)
+{
+    
+.banner {
+    min-height: 300px;
+    padding: 0px 0px;
+}
+
+}
+
+
+@media (max-width: 767px)
+{
+    
+.visible-xs {
+    display: block!important;
+}
+    
+
+.hidden-xs {
+    display: none!important;
+}
+    
+    .block2.banner
+    {
+        min-height: auto !important;
+        padding: 20px 60px;
+    }
+    
+    .helpdesk-ticket-submit-forms .ytn
+{
+    font-size: 18px;
+}
+
+    .helpdesk-ticket-submit-forms .ty
+{
+    font-size: 18px;
+    padding-left: 15px;
+}
+    
+}
+
+@media (max-width: 1199px)
+{
+    .ticket-submit img
+{
+    height: auto;
+}
+    
+}
+
+
+@media (min-width: 1199px)
+{
+    .o_connected_user .col-md-9 .form-control
+{
+    width: 80%;
+}
+    
+    .copyrights
+    {
+        text-align: right;
+    }
+    
+    .js_language_selector 
+    {
+        text-align: left;
+    }
+    
+    .o_rtl .copyrights
+    {
+        text-align: left;
+    }
+    
+    .o_rtl .js_language_selector 
+    {
+        text-align: right;
+    }
+    
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 767px)
+{
+    .helpdesk-box {
+    min-height: 150px;
+    max-height: 150px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 60%);
+    border-radius: 5px;
+}
+    
+}
+
+
+@media( max-width: 576px)
+{
+    .banner h1 {
+    font-size: 24px !important;
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
+}
+    
+    .panel-body p
+    {
+            text-align: justify !important;
+    }
+    
+    .dmtl
+    {
+        text-align: left !important;
+    }
+    
+    .dmmb10
+    {
+        margin-bottom: 10px;
+    }
+    
+}

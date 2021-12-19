@@ -1,0 +1,220 @@
+<odoo>
+    <data>
+
+        <record id="helpdesk_ticket_view_form_inherit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='team_id']" position="before">
+                    <field name="region_id" />
+                    <field name="location_id" />
+                    <field name="maintenance_equipment_id" required="1"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="city_id" />
+                    <field name="maintenance_equipment_category_id" required="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='team_id']" position="attributes">
+                    <attribute name="string">CM Team</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="helpdesk_tickets_view_tree_inherit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="maintenance_equipment_category_id" optional="show"/>
+                    <field name="maintenance_equipment_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="helpdesk_tickets_view_search_inherit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sla_deadline']" position="after">
+                    <field name="maintenance_equipment_category_id"/>
+                    <field name="maintenance_equipment_id"/>
+                    <field name="region_id" />
+                    <field name="city_id" />
+                    <field name="location_id" />
+                </xpath>
+                <xpath expr="//group//filter[@name='stage']" position="after">
+                    <filter string="Site Type" name="Site Type" context="{'group_by':'maintenance_equipment_category_id'}"/>
+                    <filter string="Site Name" name="Site Name" context="{'group_by':'maintenance_equipment_id'}"/>
+                    <filter string="Region" name="Region" context="{'group_by':'region_id'}"/>
+                    <filter string="City" name="City" context="{'group_by':'city_id'}"/>
+                    <filter string="Location" name="Location" context="{'group_by':'location_id'}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_equipment_view_form_inherit" model="ir.ui.view">
+            <field name="name">maintenance.equipment</field>
+            <field name="model">maintenance.equipment</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="string">Site Type</attribute>
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="placeholder">Site Name</attribute>
+                </xpath>
+                <xpath expr="//label[@for='name']" position="attributes">
+                    <attribute name="string">Site Name</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='maintenance_team_id']" position="replace" />
+                <xpath expr="//field[@name='category_id']" position="replace">
+                    <field name="region_id" />
+                    <field name="location_id" />
+                    <field name="maintenance_team_id" />
+                </xpath>
+                <xpath expr="//field[@name='technician_user_id']" position="before">
+                    <field name="city_id" />
+                    <field name="category_id" />
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_equipment_request_view_form_inherit" model="ir.ui.view">
+            <field name="name">maintenance.request</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="replace" />
+                <xpath expr="//field[@name='equipment_id']" position="replace" />
+                <xpath expr="//field[@name='employee_id']" position="before">
+                    <field name="region_id" />
+                    <field name="location_id" />
+                    <field name="equipment_id" string="Site Name" required="1"/>
+                </xpath>
+                <xpath expr="//field[@name='maintenance_team_id']" position="before">
+                    <field name="city_id" />
+                    <field name="category_id" string="Site Type" required="1"/>
+                </xpath>
+
+<!--                <xpath expr="//field[@name='category_id']" position="attributes">-->
+<!--                    <attribute name="string">Site Type</attribute>-->
+<!--                </xpath>-->
+
+<!--                <xpath expr="//field[@name='maintenance_type']" position="replace">-->
+<!--                    <field name="maintenance_type" />-->
+<!--                </xpath>-->
+
+            </field>
+        </record>
+
+        <record id="hr_equipment_request_view_search_inherit" model="ir.ui.view">
+            <field name="name">equipment.request.search</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='category']" position="attributes">
+                    <attribute name="string">Site Type</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_equipment_view_search_inherit" model="ir.ui.view">
+            <field name="name">maintenance.equipment.search</field>
+            <field name="model">maintenance.equipment</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='category']" position="attributes">
+                    <attribute name="string">Site Type</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_equipment_category_view_form_inherit" model="ir.ui.view">
+            <field name="name">maintenance.equipment.category</field>
+            <field name="model">maintenance.equipment.category</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='equipment_count']" position="attributes">
+                    <attribute name="string">Site</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="maintenance.hr_equipment_action" model="ir.actions.act_window">
+            <field name="name">Sites</field>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_equipment_form">
+          <field name="name">Sites</field>
+        </record>
+
+        <record id="maintenance.hr_equipment_category_action" model="ir.actions.act_window">
+            <field name="name">Site Categories</field>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_cat">
+          <field name="name">Site Categories</field>
+        </record>
+
+        <record model="ir.ui.menu" id="helpdesk.menu_helpdesk_root">
+          <field name="name">CM</field>
+        </record>
+        <record id="helpdesk.helpdesk_team_dashboard_action_main" model="ir.actions.act_window">
+            <field name="name">CM overview</field>
+        </record>
+
+        <record model="ir.ui.menu" id="helpdesk.helpdesk_team_menu">
+          <field name="name">CM Teams</field>
+        </record>
+        <record id="helpdesk.helpdesk_ticket_analysis_action" model="ir.actions.act_window">
+            <field name="name">CM Ticket Analysis</field>
+        </record>
+        <record id="helpdesk.helpdesk_team_action" model="ir.actions.act_window">
+            <field name="name">CM Teams</field>
+        </record>
+
+
+
+
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_title">
+          <field name="name">PM</field>
+        </record>
+        <record model="ir.ui.menu" id="maintenance.menu_m_request_form">
+          <field name="name">PM Request</field>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_cat">
+          <field name="name">Site Types</field>
+        </record>
+        <record id="maintenance.hr_equipment_category_action" model="ir.actions.act_window">
+            <field name="name">Site Types</field>
+        </record>
+        
+        
+        <menuitem id="helpdesk.menu_helpdesk_root" name="CM"
+        sequence="5"
+        web_icon="helpdesk_updates,static/description/cm.png"/>
+        
+        <menuitem id="maintenance.menu_maintenance_title" name="PM"
+        sequence="6"
+        web_icon="helpdesk_updates,static/description/pm.png"/>
+
+
+
+    </data>
+</odoo>

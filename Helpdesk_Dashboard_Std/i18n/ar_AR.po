@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Helpdesk_Dashboard_Std
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-03 15:18+0000\n"
+"PO-Revision-Date: 2021-10-03 15:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.tickets
+msgid ""
+"<span class=\"info-box-text\">إجمالي التذاكر</span>\n"
+"                                        <span class=\"info-box-number\">100</span>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.tickets
+msgid ""
+"<span class=\"info-box-text\">التذاكر المغلقة</span>\n"
+"                                        <span class=\"info-box-number\">25</span>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.tickets
+msgid ""
+"<span class=\"info-box-text\">التذاكر المفتوحة حديثًا</span>\n"
+"                                        <span class=\"info-box-number\">15</span>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.tickets
+msgid ""
+"<span class=\"info-box-text\">على التذاكر المحجوزة</span>\n"
+"                                        <span class=\"info-box-number\">65</span>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "<strong>مرحبًا بك في نظام تذاكر TeleNoc!</strong>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: code:addons/Helpdesk_Dashboard_Std/controller/.ipynb_checkpoints/controller-checkpoint.py:0
+#: code:addons/Helpdesk_Dashboard_Std/controller/controller.py:0
+#, python-format
+msgid "جميع التذاكر"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "أرشفة البيانات"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "افتح تذكرة جديدة"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "بوابة الخدمة الذاتية"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "تحقق من حالة التذكرة"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"تم تصميم نظام إدارة تذاكر الدعم TeleNoc (TeleNoc STMS) من أجل تبسيط طلبات "
+"الدعم وتقديم خدمة أفضل لك لحل استفساراتك في الوقت المناسب. إنه يوفر رؤية "
+"رائعة وتحكمًا مركزيًا في التعامل مع مشكلات تكنولوجيا المعلومات لضمان عدم "
+"تعرض الشركات لأي توقف. نحن نستخدم نظام تذاكر الدعم المدعوم من osTicket. يقوم"
+" بتوجيه الاستفسارات التي تم إنشاؤها عبر البريد الإلكتروني ونماذج الويب "
+"والمكالمات الهاتفية بسلاسة إلى منصة دعم عملاء بسيطة وسهلة الاستخدام ومتعددة "
+"المستخدمين وقائمة على الويب.<br/><br/> يتم تعيين رقم تذكرة فريد لكل طلب دعم "
+"يمكنك استخدامه لتتبع التقدم والاستجابات عبر الإنترنت. كمرجع لك ، نقدم "
+"أرشيفات كاملة وتاريخًا لجميع طلبات الدعم الخاصة بك. مطلوب عنوان بريد "
+"إلكتروني صالح لتقديم تذكرة. <br/><br/>"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.t_footer
+msgid "حقوق النشر © 2021 TeleNoc"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"طريقة أسهل لإنشاء الطلب ، وإبقاء المستخدمين النهائيين على علم بتقدم التذكرة "
+"والموافقات من خلال الإخطارات الآلية. تقارير رسومية للتحليل والمزيد من "
+"الإجراءات"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "مرحبًا بك في مركز الدعم"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"نحن نقدم أرشيفات ومحفوظات لجميع طلبات الدعم الحالية والسابقة كاملة مع "
+"الردود."
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid "نظام التنبيه التلقائي"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"يتم تنبيه الوكلاء عند إنشاء التذاكر أو تعيينها وإبقاء المستخدمين النهائيين "
+"على اطلاع بكل خطوة على الطريق مع الإخطارات. ميزات القوالب المخصصة معبأة "
+"أيضًا!"
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"يرجى تقديم أكبر قدر ممكن من التفاصيل حتى نتمكن من مساعدتك بشكل أفضل. لتحديث "
+"تذكرة تم إرسالها مسبقًا ، يرجى تسجيل الدخول."
+msgstr ""
+
+#. module: Helpdesk_Dashboard_Std
+#: model_terms:ir.ui.view,arch_db:Helpdesk_Dashboard_Std.homepage_test1
+msgid ""
+"يعمل نظامنا على أرشفة بياناتك القديمة غير المستخدمة لتحسين أداء مكتب "
+"المساعدة الخاص بك. يمكنك البحث عن البيانات المؤرشفة والوصول إليها وتصديرها "
+"بسهولة في أي وقت داخل النظام."
+msgstr ""

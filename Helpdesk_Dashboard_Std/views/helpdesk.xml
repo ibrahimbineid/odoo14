@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     
+    <record id="helpdesk_page" model="website.page">
+        <field name="name">Helpdesk page</field>
+        <field name="website_published">True</field>
+        <field name="url">/helpdesk</field>
+        <field name="type">qweb</field>
+        <field name="key">Helpdesk_Dashboard_Std.helpdesk_page</field>
+        <field name="arch" type="xml">
+            <t t-name="Helpdesk_Dashboard_Std.helpdesk_page_template">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure ptb">
+                        <div class="container block1">
+            	<div class="panel panel-default banner hidden-xs">
+                	<div class="panel-body text-center">
+                         <h1><strong>Welcome to TeleNoc Ticketing System!</strong></h1> TeleNoc Support Ticketing Management System (TeleNoc STMS) is built in order to streamline support requests and better serve you to resolve your inquiries timely. It provides great visibility and central control in dealing with IT issues to ensure that businesses suffer no downtime. We utilize a support ticket system powered by osTicket. It seamlessly routes inquiries created via email, web-forms and phone calls into a simple, easy-to-use, multi-user, web-based customer support platform.<br/><br/> Every support request is assigned a unique ticket number which you can use to track the progress and responses online. For your reference we provide complete archives and history of all your support requests. A valid email address is required to submit a ticket. <br/><br/>                    </div>
+                </div>
+                           
+                           <div class="panel panel-default block2 banner visible-xs">
+                	<div class="panel-body">
+                        <h2>Welcome to the Support Center</h2>                   </div>
+                </div>
+                           
+                           <div class="row block3">
+                               
+                            <div class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info-box b1">
+                                    <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Newly Opened Tickets</span>
+                                        <span class="info-box-number">15</span>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                               <div class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info-box b2">
+                                    <span class="info-box-icon bg-2"><i class="fa fa-users"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Closed Tickets</span>
+                                        <span class="info-box-number">25</span>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                               <div class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info-box b3">
+                                    <span class="info-box-icon bg-3"><i class="fa fa-users"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">On Hold Tickets</span>
+                                        <span class="info-box-number">65</span>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                               <div class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info-box b4">
+                                    <span class="info-box-icon bg-4"><i class="fa fa-users"></i></span>
+
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Total Tickets</span>
+                                        <span class="info-box-number">100</span>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                
+                           
+                           <div class="row">
+                               <div class="col-md-6">
+                                   <div class="panel panel-default">
+                                       <div class="panel-body text-center">
+                                           <div class="center-block"><i class="ptick fa fa-fw fa-4x fa-check"></i></div>
+                                           Open a New Ticket <p style="min-height: 60px;">
+                                               Please provide as much detail as possible so we can best assist you. To update a previously submitted ticket, please login. </p>
+                                           <a href="open.php" class="btn btn-primary">Open a New Ticket</a>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-md-6">
+                                   <div class="panel panel-default">
+                                       <div class="panel-body text-center">
+                                           <div class="center-block"><i class="ptick fa fa-fw fa-4x fa-check"></i></div>
+                                           Check Ticket Status <p style="min-height: 60px;">
+                                               We provide archives and history of all your current and past support requests complete with responses. </p>
+
+                                           <a href="view.php" class="btn btn-primary">Check Ticket Status</a>
+
+
+                                       </div>
+                                   </div>
+                               </div>
+                               
+                               
+                               <!-- /.row -->
+                           </div>
+                           
+                           <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="helpdesk-img">
+                                       <img class="img-responsive" src="Helpdesk_Dashboard_Std/static/src/img/helpdesk.png" alt="" />
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="row amb-tc">
+                                
+                                   <div class="col-md-4">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading1">
+                                               Self Service Portal </h2>
+                                           <p>
+                                               Easier way to create request, keep end users informed on ticket progress and approvals with automated notifications. Graphical reports for analysis and further proceedings </p>
+                                       </div>
+                                   </div>
+                               
+                                   <div class="col-md-4">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading2">
+                                               Auto Alert System </h2>
+                                           <p>
+                                               Agents are alerted when tickets are created or assigned and keep your end users informed every step of the way with notifications. Customized templates features also packed! </p>
+                                       </div>
+                                   </div>
+                               
+                                   <div class="col-md-4">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading3">
+                                               Data Archiving </h2>
+                                           <p>
+                                               Our System archives your old, unused data to improve your help desk performance. Easily search, access, and export archived data at any time within the system. </p>
+                                       </div>
+                                   </div>                               
+                           </div>
+            </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    
+    <record id="helpdesk_page_link" model="website.menu">
+  <field name="name">Helpdesk</field>
+  <field name="page_id" ref="helpdesk_page"/>
+  <field name="parent_id" ref="website.main_menu" />
+  <field name="sequence" type="int">99</field>
+</record>
+
+ </odoo>

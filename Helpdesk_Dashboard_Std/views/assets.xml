@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+    <xpath expr="link[last()]" position="after">
+
+        <link rel="stylesheet"  href="/Helpdesk_Dashboard_Std/static/src/css/font-awesome.min.css"/>
+        <link rel="stylesheet"  href="/Helpdesk_Dashboard_Std/static/src/css/style.css"/>
+        
+<!--        <script type="text/javascript" src="/Helpdesk_Dashboard_Std/static/src/js/custom_frontend.js"/>-->
+        
+        
+    </xpath>
+</template>
+    
+    </odoo>

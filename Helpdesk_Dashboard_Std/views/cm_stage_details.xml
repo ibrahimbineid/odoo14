@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="cm_stage_details" name="CM Stage Details">
+          <t t-call="website.layout">
+        <div id="wrap" style="margin-top:30px;padding-bottom:50px;direction:rtl;">
+        <t>
+           <div class="container">
+                <div class="row">
+                               <t t-foreach="values" t-as="v" class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-lg-3 " style="margin-top:10px;">
+                                        <t t-if="v == 'All Tickets'">
+                                            <a t-attf-href="/my/tickets" >
+                                                <div class="info-box newins">
+                                                  <span class="info-box-icon newin"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text" t-esc="v"/>
+                                                        <span class="info-box-number" t-esc="values[v]" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <t t-if="not v == 'All Tickets'">
+                                            <a t-attf-href="/my/tickets?filterby=all&amp;sortby=date&amp;search_in=status&amp;search={{v}}" >
+                                                <div class="info-box newins">
+                                                  <span class="info-box-icon newin"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text" t-esc="v"/>
+                                                        <span class="info-box-number" t-esc="values[v]" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </t>
+                                    </div>
+                               </t>
+                           </div>
+            </div>
+                           
+                           <script type="text/javascript" src="/Helpdesk_Dashboard_Std/static/src/js/custom_frontend.js"/>
+        </t>
+        </div>
+        </t>
+    </template>
+</odoo>

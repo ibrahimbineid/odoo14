@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     <template id="homepage_test1" name="HomePage" inherit_id="website.homepage">
+       <xpath expr="//div[@id='wrap']" position="replace">
+        <div id="wrap" class="oe_structure ptb helpdesk_rtl">
+                       <div class="container block1">
+            	<div class="panel panel-default banner">
+                	<div class="panel-body text-center">
+                         <h1><strong>مرحبًا بك في نظام تذاكر TeleNoc!</strong></h1>
+                        
+                    <p>تم تصميم نظام إدارة تذاكر الدعم TeleNoc (TeleNoc STMS) من أجل تبسيط طلبات الدعم وتقديم خدمة أفضل لك لحل استفساراتك في الوقت المناسب. إنه يوفر رؤية رائعة وتحكمًا مركزيًا في التعامل مع مشكلات تكنولوجيا المعلومات لضمان عدم تعرض الشركات لأي توقف. نحن نستخدم نظام تذاكر الدعم المدعوم من osTicket. يقوم بتوجيه الاستفسارات التي تم إنشاؤها عبر البريد الإلكتروني ونماذج الويب والمكالمات الهاتفية بسلاسة إلى منصة دعم عملاء بسيطة وسهلة الاستخدام ومتعددة المستخدمين وقائمة على الويب.<br/><br/> يتم تعيين رقم تذكرة فريد لكل طلب دعم يمكنك استخدامه لتتبع التقدم والاستجابات عبر الإنترنت. كمرجع لك ، نقدم أرشيفات كاملة وتاريخًا لجميع طلبات الدعم الخاصة بك. مطلوب عنوان بريد إلكتروني صالح لتقديم تذكرة. <br/><br/> </p>
+                    
+                    </div>
+                </div>
+                           
+                           
+                                           
+<!--
+                         <t  t-if="website.user_id != user_id">              
+                        <div class="row">
+                               <t t-foreach="values" t-as="v" class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-lg-3 " style="margin-top:10px;">
+                                        <div class="info-box newins">
+                                            <span class="info-box-icon newin"><i class="fa fa-users"></i></span>
+                                            <div class="info-box-content">
+                                                <span class="info-box-text" t-esc="v"/>
+                                                <span class="info-box-number" t-esc="values[v]" />
+                                            </div>
+                                        </div>
+                                    </div>
+                               </t>
+                           </div>
+                           
+                           <script type="text/javascript" src="/Helpdesk_Dashboard_Std/static/src/js/custom_frontend.js"/>
+                           </t>
+-->
+                           
+                           
+                                 <t  t-if="website.user_id != user_id">              
+<!--
+                        <div class="row">
+                               <t t-foreach="values" t-as="v" class="col-xl-3 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-lg-3 " style="margin-top:10px;">
+                                        <t t-if="v == 'جميع التذاكر'">
+                                            <a t-attf-href="/my/tickets" >
+                                                <div class="info-box newins">
+                                                  <span class="info-box-icon newin"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text" t-esc="v"/>
+                                                        <span class="info-box-number" t-esc="values[v]" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <t t-if="not v == 'جميع التذاكر'">
+                                            <a t-attf-href="/my/tickets?filterby=all&amp;sortby=date&amp;search_in=status&amp;search={{v}}" >
+                                                <div class="info-box newins">
+                                                  <span class="info-box-icon newin"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text" t-esc="v"/>
+                                                        <span class="info-box-number" t-esc="values[v]" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </t>
+                                    </div>
+                               </t>
+                           </div>
+-->
+                           
+                                     <div class="row">
+                   
+                    <div class="col-lg-4">
+                        <a href="/corrective_maintenance">
+                            <div class="info-box newins" style="border-bottom: 2px solid rgb(0, 192, 239);">
+                                                  <span class="info-box-icon newin" style="background-color:rgb(0, 192, 239);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">CM</span>
+                                                        <span class="info-box-number" t-esc="values1['CM']" /> 
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                         
+                                           <div class="col-lg-4">
+                        <a href="/preventive_maintenance">
+                        <div class="info-box newins" style="border-bottom: 2px solid rgb(203, 100, 131);">
+                                                  <span class="info-box-icon newin" style="    background-color: rgb(203, 100, 131);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">PM</span>
+                                                        <span class="info-box-number" t-esc="values1['PM']" />
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                         
+                                         <div class="col-lg-4">
+                        <a href="/petrolling">
+                            <div class="info-box newins" style="border-bottom: 2px solid rgb(214, 139, 95);">
+                                                  <span class="info-box-icon newin" style="background-color:rgb(214, 139, 95);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Petrolling</span>
+                                                        <span class="info-box-number" t-esc="values1['Petrolling']" />
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                         
+                                         <div class="col-lg-4">
+                        <a href="/employees">
+                            <div class="info-box newins" style="border-bottom: 2px solid rgb(192, 182, 110);">
+                                                  <span class="info-box-icon newin" style="background-color:rgb(192, 182, 110);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Employees</span>
+                                                        <span class="info-box-number" t-esc="values1['Employees']" />
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                         
+                                         <div class="col-lg-4">
+                        <a href="/users">
+                            <div class="info-box newins" style="border-bottom: 2px solid rgb(37, 144, 147);">
+                                                  <span class="info-box-icon newin" style="background-color:rgb(37, 144, 147);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Users</span>
+                                                        <span class="info-box-number" t-esc="values1['Users']" />
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                         
+                                         <div class="col-lg-4">
+                        <a href="/contacts">
+                            <div class="info-box newins" style="border-bottom: 2px solid rgb(113, 115, 113);">
+                                                  <span class="info-box-icon newin" style="background-color:rgb(113, 115, 113);"><i class="fa fa-users"></i></span>
+                                                    <div class="info-box-content">
+                                                        <span class="info-box-text">Contacts</span>
+                                                        <span class="info-box-number" t-esc="values1['Contacts']" />
+                                                    </div>
+                                                </div>
+                        </a>
+                    </div>
+                                
+                 
+                                     </div>
+                                     
+                           <script type="text/javascript" src="/Helpdesk_Dashboard_Std/static/src/js/custom_frontend.js"/>
+                           </t>
+                           
+                           
+                           <div class="row" style="margin-top:15px;">
+                               <div class="col-md-6">
+                                   <div class="panel panel-default">
+                                       <div class="panel-body text-center">
+                                           <div class="center-block"><i class="ptick fa fa-fw fa-4x fa-check"></i></div>
+                                           افتح تذكرة جديدة <p style="min-height: 60px;">
+                                               يرجى تقديم أكبر قدر ممكن من التفاصيل حتى نتمكن من مساعدتك بشكل أفضل. لتحديث تذكرة تم إرسالها مسبقًا ، يرجى تسجيل الدخول. </p>
+                                           <a href="/helpdesk" class="btn btn-primary">افتح تذكرة جديدة</a>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-md-6">
+                                   <div class="panel panel-default">
+                                       <div class="panel-body text-center">
+                                           <div class="center-block"><i class="ptick fa fa-fw fa-4x fa-check"></i></div>
+                                           تحقق من حالة التذكرة <p style="min-height: 60px;">
+                                               نحن نقدم أرشيفات ومحفوظات لجميع طلبات الدعم الحالية والسابقة كاملة مع الردود. </p>
+
+                                           <a href="/my/tickets" class="btn btn-primary">تحقق من حالة التذكرة</a>
+
+
+                                       </div>
+                                   </div>
+                               </div>
+                               
+                               
+                               <!-- /.row -->
+                           </div>
+                           
+                           <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="helpdesk-img">
+                                       <img class="img-responsive" src="/Helpdesk_Dashboard_Std/static/src/img/helpdesk.png" alt="" />
+                                   </div>
+                               </div>
+                           </div>
+                           
+                          <div class="row amb-tc">
+                                
+                                   <div class="col-xl-4 col-lg-12 col-sm-12">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading1">
+                                               بوابة الخدمة الذاتية </h2>
+                                           <p>
+                                               طريقة أسهل لإنشاء الطلب ، وإبقاء المستخدمين النهائيين على علم بتقدم التذكرة والموافقات من خلال الإخطارات الآلية. تقارير رسومية للتحليل والمزيد من الإجراءات </p>
+                                       </div>
+                                   </div>
+                               
+                                   <div class="col-xl-4 col-lg-12 col-sm-12">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading2">
+                                               نظام التنبيه التلقائي </h2>
+                                           <p>
+                                               يتم تنبيه الوكلاء عند إنشاء التذاكر أو تعيينها وإبقاء المستخدمين النهائيين على اطلاع بكل خطوة على الطريق مع الإخطارات. ميزات القوالب المخصصة معبأة أيضًا! </p>
+                                       </div>
+                                   </div>
+                               
+                                   <div class="col-xl-4 col-lg-12 col-sm-12">
+                                       <div class="helpdesk-box">
+                                           <h2 class="text-heading3">
+                                               أرشفة البيانات </h2>
+                                           <p>
+                                               يعمل نظامنا على أرشفة بياناتك القديمة غير المستخدمة لتحسين أداء مكتب المساعدة الخاص بك. يمكنك البحث عن البيانات المؤرشفة والوصول إليها وتصديرها بسهولة في أي وقت داخل النظام. </p>
+                                       </div>
+                                   </div>                               
+                           </div>
+            </div>
+        </div>
+       </xpath>
+   </template>
+
+ </odoo>
