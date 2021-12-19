@@ -1,0 +1,242 @@
+.body_login {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: relative;
+/*    background: #f8f9fd !important;*/
+/*    background-image: url(/telenoc_login/static/src/img/login-bg.jpg);*/
+    background-position: top;
+    background-size: cover;
+}
+
+.field-db
+{
+    height: 48px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.field-login
+{
+        height: 48px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.field-password
+{
+    height: 48px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_login_buttons .btn-block
+{
+    background-color: #8d448b;
+    padding: 1rem !important;
+    border: #8d448b;
+    color: #fff !important;
+}
+
+.oe_login_form .form-control
+{
+    height: 48px !important;
+}
+
+.card
+{
+    box-shadow: 0px 10px 34px -15px rgb(0 0 0 / 24%);
+    padding-bottom: 0px !important;
+}
+
+.oe_login_form .form-control
+{
+    padding-left: 20px;
+    text-align: left;
+}
+
+.o_database_list input:focus, .o_database_list select:focus {
+    border-bottom: 1px solid #8d448b;
+    outline: 0 none;
+}
+
+.o_database_list .btn-primary:hover, a.btn-select:hover {
+    background-color: #8d448b;
+    color: #FFF;
+}
+
+.o_database_list input, .o_database_list select
+{
+    color: #8d448b;
+}
+
+.input-group-append .btn-fill-secondary, .btn-secondary {
+    color: #FFFFFF;
+    background-color: #8d448b;
+    border-color: #8d448b;
+}
+
+.input-group-append .btn-fill-secondary:hover, .input-group-append .btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #8d448b;
+    border-color: #8d448b;
+}
+
+.fa-database
+{
+    padding-top: 10px;
+    color: #fff !important;
+}
+
+.login-top-icon
+{
+        width: 80px;
+    height: 80px;
+    background: #8d448b;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.body_login .card-body
+{
+    padding-top: 0rem;
+}
+
+.company_logo
+{
+    display: none;
+}
+
+.body_login a
+{
+    font-size: 16px;
+    color: #8d448b;
+}
+
+.border-bottom
+{
+    border: none !important;
+}
+
+.oe_reset_password_form .field-login {
+    height: auto;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_login_form .oe_login_buttons {
+    margin-top: 0px !important;
+}
+
+.clogo
+{
+    width: 150px;
+}
+
+.tlogo
+{
+    width: 100px !important;
+    margin-bottom: 10px;
+}
+
+footer
+{
+    display: none;
+}
+
+.oe_signup_form .field-login {
+    height: auto;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_signup_form .field-password {
+    height: auto;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_signup_form .field-name {
+    height: auto;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_signup_form .field-confirm_password {
+    height: auto;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 2px solid #8d448b;
+}
+
+.oe_signup_form .oe_login_buttons {
+    margin-top: 0px !important;
+}
+
+.o_home_menu_background > #wrapwrap
+{
+    height: 100% !important;
+}
+
+.ologo
+{
+    width: 100px !important;
+}
+
+
+@media(min-width: 768px)
+{
+    .o_database_list
+{
+/*	margin-top: 20px;*/
+    margin-top: 7px;
+    background-color: #fff !important;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+}
+    
+    .oe_login_form, .oe_signup_form, .oe_reset_password_form {
+    max-width: 100%;
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    margin-top: 0px;
+        margin-bottom: 0px;
+}
+    
+    .ologo
+    {
+        margin-left: 190px;
+    }
+    
+}
+
+@media(max-width: 767px)
+{
+    .o_database_list
+    {
+        margin-top: 10px;
+    background-color: #fff !important;
+    padding: 1rem;
+    }
+}
+
+
+@media(max-width: 576px)
+{
+    .ologo
+    {
+        margin-left: 80px;
+    }
+    
+    .tlogo {
+    width: 100px !important;
+    margin-bottom: 0px;
+}
+    
+}
