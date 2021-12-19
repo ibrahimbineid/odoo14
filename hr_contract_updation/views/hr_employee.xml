@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+
+        <record id="hr_contract_view_form_inherit" model="ir.ui.view" >
+            <field name="name">hr.contract</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="direction_id" />
+                </xpath>
+                <xpath expr="//group[@name='salary_and_advantages']" position="after">
+                     <group string="Other Allowence">
+                        <field name="home_allowance" />
+                        <field name="transportation_allowance" />
+                        <field name="mobile_allowance" />
+                        <field name="other_allowance" />
+                        <field name="total_salary" />
+                        <field name="deduct_tamenat" />
+                        <field name="tameenat_deduction" />
+                        <field name="net_contract_salary" />
+                     </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

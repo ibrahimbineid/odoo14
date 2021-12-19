@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="True" id="home_allowance" model="eos.configured.fields">
+            <field name="name">home allowance</field>
+            <field name="field_name">home_allowance</field>
+        </record>
+        <record forcecreate="True" id="transportation_allowance" model="eos.configured.fields">
+            <field name="name">transportation allowance</field>
+            <field name="field_name">transportation_allowance</field>
+        </record>
+        <record forcecreate="True" id="mobile_allowance" model="eos.configured.fields">
+            <field name="name">mobile allowance</field>
+            <field name="field_name">mobile_allowance</field>
+        </record>
+        <record forcecreate="True" id="other_allowance" model="eos.configured.fields">
+            <field name="name">other allowance</field>
+            <field name="field_name">other_allowance</field>
+        </record>
+        <record forcecreate="True" id="total_salary" model="eos.configured.fields">
+            <field name="name">total salary</field>
+            <field name="field_name">total_salary</field>
+        </record>
+        <record forcecreate="True" id="deduct_tamenat" model="eos.configured.fields">
+            <field name="name">deduct tamenat</field>
+            <field name="field_name">deduct_tamenat</field>
+        </record>
+
+    </data>
+</odoo>
