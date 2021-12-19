@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="dht1_report_petrolling_move"
+                string="Petrolling Report"
+                model="petrolling.site"
+                report_type="qweb-pdf"
+                file="dht_report_pdf.petrolling_information_template"
+                name="dht_report_pdf.petrolling_information_template"
+                />
+        
+        <record id="dht1_report_petrolling_move" model="ir.actions.report">
+    <field name="print_report_name">''+object.ref_name+'.pdf'</field>
+</record>
+
+        <template id="petrolling_information_docs">
+            <t t-set="company" t-value="user.company_id"/>
+<t t-call="web.internal_layout">
+<t t-foreach="docs" t-as="o">
+
+<div class="page container dht2">
+        
+<!--
+    <div class="row">
+        <div class="mt25" style="width:100%;text-align:center;">
+                <div>
+                <img src="/dht_report_pdf/static/src/img/logo.png" />
+              </div>
+          </div>
+    </div>
+-->
+    
+    <div class="row">
+         <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <h3 style="color:#e34925;font-size:33px;font-weight:bold;padding-top:40px;">Dallah Telecom</h3>
+              </div>
+          </div>
+        <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 150px;" alt="Logo"/>
+              </div>
+          </div>
+         <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <h3 style="font-size:33px;color:#327f2d;font-weight:bold;padding-top:40px;">Petrolling Report</h3>
+              </div>
+          </div>
+    </div>
+    
+      <div class="row">
+             <div class="c1 mt25" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size: 18px;">Dallah Petrolling Report Details</th></tr>
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Site Group</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.site_group_id.name" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Site</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><t t-foreach="o.site_id" t-as="site"><span t-esc="site.name" /><span class="vline">|</span> 
+        </t></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Date</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.date" t-options='{"widget": "date"}'/></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Region</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.sites_region.name" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">User</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.user_id.name" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Employee</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.employee_id.name" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Status</th>
+                        <td colspan="9" style="text-align:left;padding-left:3px;width:25%;"><input type="checkbox" t-att-checked="o.ck_status"/></td>
+                    
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    
+     <t t-if="o.petrol_lines">
+    <div class="row mt25">
+             <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <thead>
+                        <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size:18px;">Petrolling List</th></tr>
+                    <tr>
+                        <th>Components</th>
+                        <th>Issue</th>
+                        <th>Action</th>
+                        <th>Attachment</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+        <t t-foreach="o.petrol_lines" t-as="line">
+            <tr style="text-align:center;">
+            <td><t t-esc="line.alarm_name"/></td>
+            <td><t t-esc="line.issue"/></td>
+            <td><t t-esc="line.action"/></td>
+                <td><t t-if="line.image"><img width="50px" height="50px" t-attf-src="data:image/*;base64,{{line.image}}"/></t></td>
+            </tr>
+        </t>
+
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </t>
+    
+<!--
+      <div class="row">
+          
+            <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Site Group</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.site_group_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Site</th>
+                        
+    <td colspan="8">
+        <t t-foreach="o.site_id" t-as="site">
+            <span t-esc="site.name" /> <span class="vline">|</span> 
+        </t>
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Date</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.date" t-options='{"widget": "date"}'/>
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Region</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.sites_region.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">User</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.user_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Employee</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.employee_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;width:15%;">Status</th>
+                        
+    <td colspan="9">
+        <input type="checkbox" t-att-checked="o.ck_status"/>
+    </td>
+      
+  </tr>
+                    
+                </table>
+                
+            </div>
+        </div>
+-->
+    
+<!--
+    <t t-if="o.petrol_lines">
+    <div class="row">
+        <div class="pc3 mt25" style="width:100%;">
+            <table class="table table-bordered" style="margin-top:5px;">
+    <thead>
+
+        <tr>
+            <th>Components</th>
+            <th>Issue</th>
+            <th>Action</th>
+            <th>Attachment</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <t t-foreach="o.petrol_lines" t-as="line">
+            <tr style="text-align:center;">
+            <td><t t-esc="line.alarm_name"/></td>
+            <td><t t-esc="line.issue"/></td>
+            <td><t t-esc="line.action"/></td>
+                <td><t t-if="line.image"><img width="50px" height="50px" t-attf-src="data:image/*;base64,{{line.image}}"/></t></td>
+      </tr>
+        </t>
+
+    </tbody>
+  </table>
+          </div>
+    </div>
+    </t>
+-->
+    
+    </div>
+
+</t>
+</t>
+
+</template>
+
+        <template id="petrolling_information_template">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="1"/>
+                <t t-set="data_report_orientation" t-value="Landscape"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="dht_report_pdf.petrolling_information_docs"
+                       t-lang="request.env.user.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

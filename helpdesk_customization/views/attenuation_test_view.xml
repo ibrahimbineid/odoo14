@@ -1,0 +1,113 @@
+<odoo>
+
+    <record id="attenuation_requirements_view_tree" model="ir.ui.view">
+        <field name="name">attenuation.requirements.tree</field>
+        <field name="model">attenuation.requirements</field>
+        <field name="arch" type="xml">
+            <tree string="Optical Test">
+                <field name="requirement"/>
+                <field name="fif_nm"/>
+                <field name="six_nm"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="attenuation_requirements_view_form" model="ir.ui.view">
+        <field name="name">attenuation.requirements.form</field>
+        <field name="model">attenuation.requirements</field>
+        <field name="arch" type="xml">
+            <form string="Site Type">
+                <sheet>
+                    <group>
+                        <field name="requirement"/>
+                        <field name="fif_nm"/>
+                        <field name="six_nm"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="attenuation_requirement_action" model="ir.actions.act_window">
+        <field name="name">Attenuation Test</field>
+        <field name="res_model">attenuation.requirements</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="helpdesk_customization.attenuation_requirements_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Contractor
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_requirement"
+            name="Manage Attenuation Requirements"
+            parent="helpdesk.helpdesk_menu_config"
+            action="attenuation_requirement_action"
+            sequence="8"/>
+
+
+    <record id="attenuation_test_view_tree" model="ir.ui.view">
+        <field name="name">attenuation.test.tree</field>
+        <field name="model">attenuation.test</field>
+        <field name="arch" type="xml">
+            <tree string="Optical Test">
+                <field name="fif_nm_tx"/>
+                <field name="fif_nm_rx"/>
+                <field name="fif_nm_section"/>
+                <field name="six_nm_tx"/>
+                <field name="six_nm_rx"/>
+                <field name="six_nm_section"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="attenuation_test_view_form" model="ir.ui.view">
+        <field name="name">attenuation.test.form</field>
+        <field name="model">attenuation.test</field>
+        <field name="arch" type="xml">
+            <form string="Site Type">
+                <sheet>
+                    <group>
+                        <group string="1550nM">
+                            <field name="fif_nm_tx"/>
+                            <field name="fif_nm_rx"/>
+                            <field name="fif_nm_section"/>
+                        </group>
+
+                        <group string="1625nM">
+                            <field name="six_nm_tx"/>
+                            <field name="six_nm_rx"/>
+                            <field name="six_nm_section"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="attenuation_testing_action" model="ir.actions.act_window">
+        <field name="name">Attenuation Test</field>
+        <field name="res_model">attenuation.test</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="helpdesk_customization.attenuation_test_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Contractor
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_attenuation_testing"
+            name="Manage Attenuation Testing"
+            parent="helpdesk.helpdesk_menu_config"
+            action="attenuation_testing_action"
+            sequence="8"/>
+
+</odoo>

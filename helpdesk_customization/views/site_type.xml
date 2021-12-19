@@ -1,0 +1,150 @@
+<odoo>
+
+    <record id="maintenance_location_form_inherit" model="ir.ui.view">
+        <field name="name">maintenance.location.form</field>
+        <field name="model">maintenance.location</field>
+        <field name="inherit_id" ref="helpdesk_updates.maintenance_location_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='abbreviation']" position="after">
+                <field name="site_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="site_group_view_tree" model="ir.ui.view">
+        <field name="name">site.group.tree</field>
+        <field name="model">site.group</field>
+        <field name="arch" type="xml">
+            <tree string="Site Group">
+                <field name="name" string="Name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="site_group_view_form" model="ir.ui.view">
+        <field name="name">site.group.form</field>
+        <field name="model">site.group</field>
+        <field name="arch" type="xml">
+            <form string="Site Group">
+                <sheet>
+                    <group>
+                         <field name="name" string="Name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="site_group_action" model="ir.actions.act_window">
+        <field name="name">Site Group</field>
+        <field name="res_model">site.group</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="site_group_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Site Group
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_site_group"
+        name="Site Group"
+        parent="maintenance.menu_maintenance_configuration"
+        action="site_group_action"
+        sequence="6"/>
+
+
+
+
+
+    <record id="site_type_view_tree" model="ir.ui.view">
+        <field name="name">site.type.tree</field>
+        <field name="model">site.type</field>
+        <field name="arch" type="xml">
+            <tree string="Site Type">
+                <field name="name" string="Name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="site_type_view_form" model="ir.ui.view">
+        <field name="name">site.type.form</field>
+        <field name="model">site.type</field>
+        <field name="arch" type="xml">
+            <form string="Site Type">
+                <sheet>
+                    <group>
+                         <field name="name" string="Name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="site_type_action" model="ir.actions.act_window">
+        <field name="name">Site Type</field>
+        <field name="res_model">site.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="site_type_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new equipment category
+            </p>
+        </field>
+    </record>
+
+
+<!--     <menuitem
+        id="menu_site_type"
+        name="Site Type"
+        parent="maintenance.menu_maintenance_configuration"
+        action="site_type_action"
+        sequence="6"/> -->
+
+    <record id="contact_name_view_tree" model="ir.ui.view">
+        <field name="name">contact.name.tree</field>
+        <field name="model">contact.name</field>
+        <field name="arch" type="xml">
+            <tree string="Site Type">
+                <field name="name" string="Name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="contact_name_view_form" model="ir.ui.view">
+        <field name="name">contact.name.form</field>
+        <field name="model">contact.name</field>
+        <field name="arch" type="xml">
+            <form string="Site Type">
+                <sheet>
+                    <group>
+                         <field name="name" string="Name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="contact_name_action" model="ir.actions.act_window">
+        <field name="name">Contacts</field>
+        <field name="res_model">contact.name</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="contact_name_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new Contractor
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_contact_name"
+        name="Contacts"
+        parent="maintenance.menu_maintenance_configuration"
+        action="contact_name_action"
+        sequence="6"/>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Task stages Access role -->
+        <record id="move_task_stages" model="ir.module.category">
+            <field name="name">Task stages</field>
+            <field name="sequence">7</field>
+        </record>
+         <record id="can_move_btw_stages" model="res.groups">
+            <field name="name">Move between stages</field>
+            <field name="category_id" ref="hasanin_right_access.move_task_stages"/>
+        </record>
+         <record id="can_move_to_closed_stages" model="res.groups">
+            <field name="name">Move To closed stage</field>
+            <field name="category_id" ref="hasanin_right_access.move_task_stages"/>
+            <field name="implied_ids" eval="[(4, ref('hasanin_right_access.can_move_btw_stages'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <!-- Helpdesk ticket stages Access role -->
+        <record id="move_helpdesk_stages" model="ir.module.category">
+            <field name="name">Helpdesk ticket stages</field>
+            <field name="sequence">7</field>
+        </record>
+         <record id="can_move_btw_helpdesk_stages" model="res.groups">
+            <field name="name">Move between helpdesk stages</field>
+            <field name="category_id" ref="hasanin_right_access.move_helpdesk_stages"/>
+        </record>
+         <record id="can_move_to_closed_helpdesk_stages" model="res.groups">
+            <field name="name">Move To closed helpdesk stage</field>
+            <field name="category_id" ref="hasanin_right_access.move_helpdesk_stages"/>
+            <field name="implied_ids" eval="[(4, ref('hasanin_right_access.can_move_btw_helpdesk_stages'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin')),(4, ref('base.public_user')), (4, ref('base.template_portal_user_id'))]"/>
+        </record>
+
+        <!-- Hide Delete Button Access Right-->
+        <record id="group_display_delete_action" model="res.groups">
+            <field name="name">Access Delete</field>
+            <field name="implied_ids" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>

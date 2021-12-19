@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="dht2_report_cm_move"
+                string="CM Report"
+                model="helpdesk.ticket"
+                report_type="qweb-pdf"
+                file="dht_report_pdf.new_cm_tickets_information_template"
+                name="dht_report_pdf.new_cm_tickets_information_template"
+                />
+
+        
+        <record id="dht2_report_cm_move" model="ir.actions.report">
+    <field name="print_report_name">'CM_'+object.name+'.pdf'</field>
+</record>
+        
+        <template id="new_cm_tickets_information_docs">
+            <t t-set="company" t-value="user.company_id"/>
+<t t-call="web.internal_layout">
+<t t-foreach="docs" t-as="o">
+
+<div class="page container dht2">
+    
+     <div class="row">
+         <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <h3 style="color:#e34925;font-size:33px;font-weight:bold;padding-top:40px;">Dallah Telecom</h3>
+              </div>
+          </div>
+        <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 150px;" alt="Logo"/>
+              </div>
+          </div>
+         <div class="mt25" style="width:33%;text-align:center;">
+                <div>
+                <h3 style="font-size:33px;color:#327f2d;font-weight:bold;padding-top:40px;">CM Report</h3>
+              </div>
+          </div>
+    </div>
+    
+      <div class="row">
+             <div class="c1 mt25" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size: 18px;">Dallah Service Maintenance Report Details</th></tr>
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Maintenance Office</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.region_id.name" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Date of Request</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.create_date" t-options='{"widget": "date"}'/></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Reference#</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.cm_ref" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Created By</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.user_id.name" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Ticket Requested Visa</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;">Email / System</td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Email</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.partner_email" /></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Site Type</th>
+                        <td colspan="9" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.maintenance_equipment_category_id.name" /></td>
+                    
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    
+        <div class="row mt25">
+             <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size:18px;">Site Details</th></tr>
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Site Name</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.maintenance_equipment_id.name" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Longitude :</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.maintenance_equipment_id.longitude" t-options='{"widget": "float", "precision": 6}' /></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Region / District</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.region_id.name" /></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Latitude :</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"><span t-esc="o.maintenance_equipment_id.latitude" t-options='{"widget": "float", "precision": 6}' /></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    
+        <div class="row mt25">
+        <div class="" style="width:100%;border: 1px solid #000;">
+            <h4 style="background-color:#c4d69c;text-align:center;font-size:18px;"><span>Description of Services Performed</span></h4>
+            <div>
+                <h5>A) Reported Issue:</h5>
+                <h5>B) Action Taken:</h5>
+                <h5>C) Remarks:</h5>
+            </div>
+        </div>
+    </div>
+    
+    
+    <t t-if="o.part_ids">
+    <div class="row mt25">
+             <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <thead>
+                        <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size:18px;">Materials/Equipment List</th></tr>
+                    <tr>
+                        <th>Item Type</th>
+                        <th>Qty</th>
+                        <th>Add/ Remove</th>
+                        <th>Model</th>
+                        <th>Serial Number</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <t t-foreach="o.part_ids" t-as="line">
+                            <tr style="text-align:center;">
+                        <td><t t-esc="line.product_id.name"/></td>
+                        <td><t t-esc="line.qty" t-options='{"widget": "float", "precision": 2}' /></td>
+                        <td><t t-esc="line.type"/></td>
+                        <td><t t-esc="line.lot_id.name"/></td>
+                        <td></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </t>
+    
+    <div class="row mt25">
+        <div class="c1" style="width:33%;">
+            <input type="checkbox" />  <label>JOB Completed</label>
+        </div>
+        
+         <div class="c1" style="width:33%;">
+             <input type="checkbox" />  <label>Parts To Be Order</label>
+        </div>
+        
+         <div class="c1" style="width:33%;">
+             <input type="checkbox" />  <label>Cancelled</label>
+        </div>
+    </div>
+    
+    <div class="row mt25">
+             <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                            
+                    <tr><th colspan="12" style="text-align:center;font-weight:bold;background-color:#c4d69c;font-size:18px;">Acknowledgement</th></tr>
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Engineer/Technician</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Client Custodian</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Service Date / Time</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"></td>
+                        <th colspan="3" style="text-align:left;padding-left:3px;width:25%;">Signature</th>
+                        <td colspan="3" style="text-align:left;padding-left:3px;width:25%;"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    
+<!--
+    <div t-attf-class="footer o_standard_footer">
+            <div class="text-center" style="border-top: 1px solid black;">
+                <ul class="list-inline mb4">
+                    <li t-if="company.phone" class="list-inline-item d-inline"><span class="o_force_ltr" t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item d-inline"><span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item d-inline"><span t-field="company.website"/></li>
+                </ul>
+            </div>
+        </div>
+-->
+        
+    
+    </div>
+
+</t>
+</t>
+
+</template>
+
+        <template id="new_cm_tickets_information_template">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="1"/>
+                <t t-set="data_report_orientation" t-value="Landscape"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="dht_report_pdf.new_cm_tickets_information_docs"
+                       t-lang="request.env.user.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

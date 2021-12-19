@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="dht3_report_pm_move"
+                string="PM Report"
+                model="maintenance.request"
+                report_type="qweb-pdf"
+                file="dht_report_pdf.new_pm_tickets_information_template"
+                name="dht_report_pdf.new_pm_tickets_information_template"
+                />
+
+        
+          <record id="dht3_report_pm_move" model="ir.actions.report">
+    <field name="print_report_name">'PM_'+object.location_id.name+object.request_date.strftime('%Y-%m-%d')</field>
+</record>
+        
+        
+        <template id="new_pm_tickets_information_docs">
+<t t-call="web.internal_layout">
+<t t-foreach="docs" t-as="o">
+<div class="page container dht2">
+    
+    
+        <div class="header">
+    <div class="row">
+        <div style="width:100%;">
+                <div>
+                <img src="/dht_report_pdf/static/src/img/pm_header.png" />
+              </div>
+          </div>
+    </div>
+        </div>
+    
+    
+    <div class="container p1" style="padding-top:30px !important;">
+            <div class="row" style="margin-top:30px;background: url(/dht_report_pdf/static/src/img/pm_1.png);background-position: center;
+    background-repeat: no-repeat;background-size:100%;height:1000px;">
+        <div style="width:100%;">
+            <ul>
+                <li>Site Name: <span t-esc="o.equipment_id.name" /></li>
+                <li>City: <span t-esc="o.city_id.name" /></li>
+                <li>Location: <span t-esc="o.location_id.name" /></li>
+                <li>Coordination: </li>
+                <li>Created By: <span t-esc="o.employee_id.name" /></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">1</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+             <div style="width:100%;padding-top:50px;">
+                <h4>Table of Contents</h4>
+                
+                <div class="left hem">Pole Site Components &amp; Equipment</div>
+                    <div class="right hem">3</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Pole &amp; Pole Foundation</div>
+                    <div class="right hem">5</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Outdoor Closures</div>
+                    <div class="right hem">7</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Civil &amp; Fiber Network</div>
+                    <div class="right hem">9</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Optical Testing</div>
+                    <div class="right hem">10</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem hem2">Fibre Optical Length Measurement</div>
+                    <div class="right hem hem2">10</div>
+                    <div class="dotted hem hem2"></div>
+                
+                <div class="left hem hem2">Attenuation Test</div>
+                    <div class="right hem hem2">11</div>
+                    <div class="dotted hem hem2"></div>
+                
+                 <div class="left hem">Cameras</div>
+                    <div class="right hem">13</div>
+                    <div class="dotted hem"></div>
+                
+                 <div class="left hem">Site Power</div>
+                    <div class="right hem">15</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Solar System Power</div>
+                    <div class="right hem">17</div>
+                    <div class="dotted hem"></div>
+                
+                <div class="left hem">Battery Closures</div>
+                    <div class="right hem">18</div>
+                    <div class="dotted hem"></div>
+                
+                 <div class="left hem">Wireless System</div>
+                    <div class="right hem">20</div>
+                    <div class="dotted hem"></div>                
+
+            </div>
+        </div>
+    </div>
+    
+    
+     <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+         
+         <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">2</span></span></h4>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+                <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>POLE SITE COMPONENTS &amp; EQUIPMENT</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">3</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Pole Site Components &amp; Equipment</h4>
+                
+                <img src="/dht_report_pdf/static/src/img/pm_3.png" />
+            </div>
+        </div>
+    </div>
+    
+    <t t-if="o.is_pole">
+      <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+          
+          <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">4</span></span></h4>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+                <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>POLE &amp; POLE FOUNDATION</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    </t>
+    
+    <t t-if="o.is_pole">
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">5</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Pole &amp; Pole Foundation</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">Pole &amp; Pole Foundation Physical inspection</th></tr>
+    
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        <div class="row" style="padding-left:15px !important;margin-right:-15px !important;margin-top:0px;">
+            <div style="width:60%;">
+                        
+                         <table class="table table-bordered">
+                            
+                    <tr>
+                        <th colspan="4" style="border:2px solid #000;text-align:left;width:30%;border-top: 0px solid #000 !important;">Pole Type (Height):</th>
+                        <th colspan="4" style="border:2px solid #000;text-align:left;width:30%;border-top: 0px solid #000 !important;"></th>
+                    </tr>
+                             
+                </table>
+                        
+                    </div>
+        </div>
+
+        
+        <div class="row p4" style="margin-top:20px;">
+
+                                          <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                                              
+                                              <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              
+                                              <tr class="btb" t-foreach="o.pole_lines" t-as="p_line">
+    <td style="width:65%;"><span t-field="p_line.site_ins"/></td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr>
+
+
+</table>
+                        
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"> <span t-field="o.pole_comment"/></h4>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    </t>
+    
+    <t t-if="o.is_outdoor">
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">6</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+                <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>OUTDOOR CLOSURE</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">7</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Outdoor Closures</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">Outdoor Closure Physical Inspection</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:20px;">
+             <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                 
+                  <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                 
+  <tr class="btb" t-foreach="o.outdoor_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr>
+
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.outdoor_comment"/></h4>
+            </div>
+            
+            
+        </div>
+
+        
+    </div>
+    </t>
+    
+     <t t-if="o.is_civil">
+     <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+         
+         <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">8</span></span></h4>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+                <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>CIVIL &amp; FIBER NETWORK</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+    
+     <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+         
+         <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">9</span></span></h4>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Civil &amp; Fiber Network</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">OSP Network Cable Route Identification (Duct, Fiber Cable, Mini Manholes)</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        <div class="row" style="padding-left:15px !important;margin-right:-15px !important;margin-top:0px;">
+            <div style="width:60%;">
+                        
+                         <table class="table table-bordered vm">                             
+                             <tr> 
+                                 <th rowspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;vertical-align:middle;">MMH No.</th> 
+                                 <th rowspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;"></th>
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;">Latitude</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;">
+                                  <span t-field="o.equipment_id.latitude"/>
+                                 </td></tr> 
+                             <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Longitude</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;">
+                                 <span t-field="o.equipment_id.longitude"/>
+                                 </td>
+                             </tr>
+                </table>
+                        
+                    </div>
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:20px;">
+                 <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                     
+                      <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                     
+   <tr class="btb" t-foreach="o.civil_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr>
+                     
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.civil_comment"/></h4>
+            </div>
+            
+            
+        </div>
+    
+        
+    </div>
+    </t>
+    
+    <t t-if="o.is_camera">
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">10</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+               <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>Cameras</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:5px;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">11</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:30px;">
+                <h4>Cameras</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:5px;padding-left:15px;padding-right:15px;padding-bottom:5px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">CCTV Camera Physical Inspection</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        <div class="row" style="padding-left:15px !important;margin-right:0px !important;margin-top:-15px;">
+           <div style="width:100%;">
+                        
+                         <table class="table table-bordered cameras">                             
+                             <tr> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:8%;border-top: 2px solid #000 !important;vertical-align:middle;">No. of Fixed Cameras:</th> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th>
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:12%;border-top: 2px solid #000 !important;">Fixed Cameras-1</th> 
+                             <th rowspan="4" style="border:2px solid #000;text-align:left;width:2%;border-top: 2px solid #000 !important;vertical-align:middle;">Brand:</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:2%;border-top: 2px solid #000 !important;vertical-align:middle;">Model:</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th> 
+                             </tr> 
+                             <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Fixed Cameras-2</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th> 
+                             </tr>
+                              <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Fixed Cameras-3</th> 
+                                  <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th> 
+                                  <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th> 
+                             </tr>
+                             <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Fixed Cameras-4</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th> 
+                             </tr>
+                             
+                             
+                             <tr> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:8%;border-top: 2px solid #000 !important;vertical-align:middle;">No. of PTZ Cameras:</th> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th>
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 2px solid #000 !important;">PTZ Cameras-1</th> 
+                             <th rowspan="4" style="border:2px solid #000;text-align:left;width:2%;border-top: 2px solid #000 !important;vertical-align:middle;">Brand:</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th> 
+                                 <th rowspan="4" style="border:2px solid #000;text-align:left;width:2%;border-top: 2px solid #000 !important;vertical-align:middle;">Model:</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th> 
+                             </tr> 
+                             <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">PTZ Cameras-2</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:10%;border-top: 2px solid #000 !important;"></th>.
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:20%;border-top: 2px solid #000 !important;"></th>
+                             </tr>
+                                 
+
+                             
+                </table>
+                        
+                    </div>
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:5px;">
+                 <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                     
+                      <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                     
+   <tr class="btb" t-foreach="o.camera_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr>                    
+                     
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.camera_comment"/></h4>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    </t>
+    
+    <t t-if="o.is_site">
+     <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+         
+         <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">12</span></span></h4>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+              <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>Site Power</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+     <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+         
+         <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">13</span></span></h4>
+            </div>
+        </div>
+         
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Site Power</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">Site Power System Physical Inspection (Solar Panels, Solar Energy System, Batteries and SECO Cabinet)</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        <div class="row" style="padding-left:15px !important;margin-right:0px !important;margin-top:0px;">
+            <div style="width:100%;">
+                        
+                         <table class="table table-bordered vm">                             
+                             <tr> 
+                                 <th rowspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;vertical-align:middle;">SECO Cabinet Location GPS Coordinates</th> 
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;">Latitude</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;">
+                                 <span t-field="o.equipment_id.latitude"/>
+                                 </td>
+                             <th colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;">Meter Number</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;border-top: 0px solid #000 !important;"></td>
+                             </tr> 
+                             <tr><th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Longitude</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;">
+                                 <span t-field="o.equipment_id.longitude"/>
+                                 </td>
+                                 <th colspan="2" style="border:2px solid #000;text-align:left;width:15%;">Subscription No.</th> 
+                                 <td colspan="2" style="border:2px solid #000;text-align:left;width:15%;"></td>
+                             </tr>
+                </table>
+                        
+                    </div>
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:20px;">
+                 <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                     
+                      <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                     
+   <tr class="btb" t-foreach="o.site_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr> 
+                
+                     
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.site_comment"/></h4>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    </t>
+    
+    <t t-if="o.is_battery">
+      <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+          
+          <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">16</span></span></h4>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Battery Closures</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">Battery Closure Physical Inspection</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:20px;">
+             <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                 
+                  <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                 
+   <tr class="btb" t-foreach="o.battery_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr> 
+
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.battery_comment"/></h4>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    </t>
+    
+    <t t-if="o.is_wireless">
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;">
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Site Inspection Report <span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">17</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:300px;">
+               <div class="site-inspection-block">
+                        <h2>SITE INSPECTION</h2>
+                        <h5>Wireless System</h5>
+                    </div>
+                
+            </div>
+         </div>
+    </div>
+    
+    
+    <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+        
+        <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Preliminary Acceptance Test Binder<span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">18</span></span></h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4>Wireless System</h4>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="container p3" style="border: 2px solid #000;padding-top:15px;padding-left:15px;padding-right:15px;padding-bottom:30px;">
+        <div class="row" style="padding-left:15px !important;padding-right:15px !important;">
+            <div style="width:100%;">
+                <table class="table table-bordered vm">
+                            
+                    <tr><th colspan="12" style="border:2px solid #000;text-align:left;font-weight:bold;background-color:#94ff55;font-size: 16px;">Network Equipment (Wireless System)</th></tr>
+                    
+                </table>
+                
+                    
+            </div>
+            
+                
+        </div>
+        
+        
+        <div class="row p6" style="margin-top:20px;">
+             <table class="tnb" style="border-collapse: separate !important; border-spacing: 15px 0px !important;">
+                 
+                  <tr>
+    <td style="width:65%;text-align: center;background-color:#c4d69c;font-weight: bold;vertical-align: middle;border-bottom:2px solid #000 !important;" rowspan="3">Site Inspection</td>
+    <td style="width:35%;text-align: center;background-color:#c4d69c;font-weight: bold;border-bottom:2px solid #000 !important;" colspan="3">Status</td>
+  </tr>
+                                              <tr>
+    
+    <td style="width:10%;border: 5px solid transparent;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                                              
+                                              <tr>
+    
+    <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Ok</td>
+      <td style="width:10%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Not Ok</td>
+      <td style="width:15%;background-color:#c4d69c;text-align: center;font-weight: bold;border-bottom:2px solid #000 !important;">Remarks</td>
+  </tr>
+                                              <tr>
+    <td style="width:65%;border: 5px solid transparent;"></td>
+    <td style="width:10%;border: 0;"></td>
+      <td style="width:10%;border: 0;"></td>
+      <td style="width:15%;border: 0;"></td>
+  </tr>
+                 
+    <tr class="btb" t-foreach="o.wireless_lines" t-as="p_line">
+    <td style="width:65%;">
+        <span t-field="p_line.site_ins"/>
+      </td>
+    <td style="width:10%;text-align:center;"><t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:10%;text-align:center;"><t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t></td>
+      <td style="width:15%;text-align:center;"><span t-field="p_line.remarks"/></td>
+  </tr> 
+
+</table>
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:10px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="color:#5175af;padding-left:5px;">Take photo evidence and detailed notes of any deficiencies found</span></h4>
+            </div>
+            
+            
+        </div>
+        
+         <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;">
+            <div style="width:100%;">
+                <h4><span style="padding-left:5px;">Additional Comments, please note here:</span></h4>
+            </div>
+            
+            
+        </div>
+        
+        <div class="row p5" style="margin-left:0px !important;margin-top:2px;margin-right:0px !important;height: 30px;">
+            <div style="width:100%;">
+                <h4 style="padding-left:5px;"><span t-field="o.wireless_comment"/></h4>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    </t>
+    
+      <t t-if="o.material_ids">
+      <div class="container p2" style="page-break-before: always;padding-top:30px !important;margin-bottom:20px;">
+          
+          <div class="row">
+            <div style="width:100%;">
+                <h4 style="border-bottom:1px solid #a9a9a9;text-align:right;"><span style="color:#000;">Preliminary Acceptance Test Binder<span style="margin-left:5px;background-color:#93c339;color:#fff;padding-left:6px;padding-right:6px;padding-top:3px;padding-bottom:3px;">19</span></span></h4>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div style="width:100%;padding-top:50px;">
+                <h4 style="color: #000;">Bill Of Material :</h4>
+            </div>
+        </div>
+          
+          <div class="row bom" style="margin-top:20px;">
+            <table class="table table-bordered">
+                
+    <thead>
+        <tr>
+                    <th colspan="12" style="color: #fff;text-align: center;background-color: #51632f;">Bill of Material</th>
+                </tr>
+        <tr>
+                    <th colspan="12" style="background-color: #c1d49c;">CCTV</th>
+                </tr>
+      <tr style="text-align: center;background-color: #7f7f7f;color:#fff;">
+        <th style="width: 5%;">#</th>
+        <th>Item Type</th>
+        <th>Model</th>
+        <th style="width: 20%;">Serial Number</th>
+        <th>QTY</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <t t-foreach="o.material_ids" t-as="mline">
+      <tr style="text-align:center;">
+        <td></td>
+        <td><t t-esc="mline.material_type.name"/></td>
+        <td><t t-esc="mline.material_model.name"/></td>
+          <td><t t-esc="mline.material_serial_number.name"/></td>
+          <td></td>
+          <td><t t-esc="mline.item_status"/></td>
+      </tr>
+        </t>
+    </tbody>
+  </table>
+          </div>
+        
+    </div>
+    </t>
+    
+     <div class="footer">
+    <div class="row">
+        <div style="width:100%;">
+                <div>
+                <img src="/dht_report_pdf/static/src/img/pm_footer.png" />
+              </div>
+          </div>
+    </div>
+        </div>
+    
+    </div>
+
+</t>
+</t>
+
+</template>
+
+        <template id="new_pm_tickets_information_template">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="1"/>
+                <t t-set="data_report_orientation" t-value="Landscape"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="dht_report_pdf.new_pm_tickets_information_docs"
+                       t-lang="request.env.user.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

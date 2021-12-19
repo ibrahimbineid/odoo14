@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="dht1_report_pm_move"
+                string="PM Report"
+                model="maintenance.request"
+                report_type="qweb-pdf"
+                file="dht_report_pdf.pm_tickets_information_template"
+                name="dht_report_pdf.pm_tickets_information_template"
+                />
+
+        <template id="pm_tickets_information_docs">
+<t t-call="web.internal_layout">
+<t t-foreach="docs" t-as="o">
+
+<div class="page container dht1">
+        
+    <div class="row">
+        <div class="mt25" style="width:100%;text-align:center;">
+                <div>
+                <img src="/dht_report_pdf/static/src/img/logo.png" />
+              </div>
+          </div>
+    </div>
+    
+      <div class="row">
+          
+            <div class="c1" style="width:100%;">
+                <table class="table table-bordered">
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Region</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.region_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">City</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.city_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Location</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.location_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Site Type</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.category_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Site</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.equipment_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Team</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.maintenance_team_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Created By</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.employee_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Responsible</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.user_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Request Date</th>
+                        
+    <td colspan="9">
+        <t t-esc="o.request_date" t-options='{"widget": "date"}' />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Scheduled Date</th>
+                        
+    <td colspan="9">
+        <t t-esc="o.schedule_date" t-options='{"widget": "date"}' />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Maintenance Type</th>
+                        
+    <td colspan="9">
+        <span t-field="o.maintenance_type" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Duration</th>
+                        
+    <td colspan="9">
+        <t t-esc="o.duration" t-options='{"widget": "float_time"}'/> 
+    </td>
+      
+  </tr>
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Company</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.company_id.name" />
+    </td>
+      
+  </tr>
+                    
+                    <tr>
+                        <th colspan="3" style="padding-left:10px;vertical-align:middle;">Created On</th>
+                        
+    <td colspan="9">
+        <span t-esc="o.create_date" t-options='{"widget": "date"}'/>
+    </td>
+      
+  </tr>                
+                    
+                </table>
+                
+            </div>
+        </div>
+    
+    <t t-if="o.part_ids">
+    <div class="row">
+        <div class="c3 mt25" style="width:100%;">
+            <table class="table table-bordered" style="margin-top:5px;">
+    <thead>
+
+        <tr>
+            <th>Type</th>
+            <th style="width:15%;">Product</th>
+            <th style="width:15%;">Name</th>
+            <th style="width:20%;">Lot</th>
+            <th>Qty</th>
+            <th>UOM</th>
+            <th style="width:17%;">Receive Qty</th>
+            <th style="width:20%;">Delivered Qty</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <t t-foreach="o.part_ids" t-as="line">
+            <tr style="text-align:center;">
+            <td><t t-esc="line.type"/></td>
+            <td><t t-esc="line.product_id.name"/></td>
+            <td><t t-esc="line.name"/></td>
+            <td><t t-esc="line.lot_id.name"/></td>
+                <td><t t-esc="line.qty" t-options='{"widget": "float", "precision": 2}' /></td>
+                <td><t t-esc="line.uom_id.name"/></td>
+                <td><t t-if="line.receive_qty"><t t-esc="line.receive_qty" t-options='{"widget": "float", "precision": 2}' /></t></td>
+                <td><t t-esc="line.delivered_qty" t-options='{"widget": "float", "precision": 2}' /></td>
+      </tr>
+        </t>
+
+    </tbody>
+  </table>
+          </div>
+    </div>
+    </t>
+    
+    <div class="row mt25">
+        <div style="width:100%;">
+            <t t-if="o.is_pole or o.is_battery or o.is_optical or o.is_camera or o.is_wireless or o.is_civil or o.is_attenuation or o.is_site or o.is_outdoor"><h4>Checklist</h4></t>
+            <ul>
+                <t t-if="o.is_pole"><li><span>Pole &amp; Pole Foundation</span></li></t>
+                <t t-if="o.is_battery"><li><span>Battery Closures</span></li></t>
+                <t t-if="o.is_optical"><li><span>Optical Testing: Fiber Optical Length Measurement</span></li></t>
+                <t t-if="o.is_camera"><li><span>Cameras</span></li></t>
+                <t t-if="o.is_wireless"><li><span>Wireless System</span></li></t>
+                <t t-if="o.is_outdoor"><li><span>Outdoor Closures</span></li></t>
+                <t t-if="o.is_civil"><li><span>Civil &amp; Fiber Network</span></li></t>
+                <t t-if="o.is_attenuation"><li><span>Optical Testing: Attenuation Test</span></li></t>
+                <t t-if="o.is_site"><li><span>Site Power</span></li></t>
+            </ul>
+        </div>
+    </div>
+    
+    </div>
+
+</t>
+</t>
+
+</template>
+
+        <template id="pm_tickets_information_template">
+            <t t-call="web.html_container">
+                <t t-set="data_report_margin_top" t-value="1"/>
+                <t t-set="data_report_orientation" t-value="Landscape"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="dht_report_pdf.pm_tickets_information_docs"
+                       t-lang="request.env.user.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

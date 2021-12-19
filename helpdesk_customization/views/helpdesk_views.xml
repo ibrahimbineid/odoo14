@@ -1,0 +1,489 @@
+<odoo>
+
+    <record id="helpdesk_ticket_pivot_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.pivot</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_pivot_analysis"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="ticket_ids" type="row"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_form_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header" position="inside">
+                <button string="Validate" type="object" name="action_validate" />
+            </xpath>
+
+            <xpath expr="//field[@name='region_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True, 'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='city_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True, 'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='location_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True, 'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='maintenance_equipment_category_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True, 'no_create':True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='maintenance_equipment_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True, 'no_open': True, 'no_create':True}</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='ticket_type_id']" position="after">
+                <field name="review_stage" />
+                <field name="ticket_ids" widget="many2many_tags" string="Ticket Type"/>
+                <field name="is_pole_client_approved" invisible="1"/>
+                <field name="is_pole_contractor_approved" invisible="1"/>
+
+                <field name="is_outdoor_client_approved" invisible="1"/>
+                <field name="is_outdoor_contractor_approved" invisible="1"/>
+
+                <field name="is_battery_client_approved" invisible="1"/>
+                <field name="is_battery_contractor_approved" invisible="1"/>
+
+                <field name="is_civil_client_approved" invisible="1"/>
+                <field name="is_civil_contractor_approved" invisible="1"/>
+
+                <field name="is_fibre_client_approved" invisible="1"/>
+                <field name="is_fibre_contractor_approved" invisible="1"/>
+
+                <field name="is_attenuation_client_approved" invisible="1"/>
+                <field name="is_attenuation_contractor_approved" invisible="1"/>
+
+                <field name="is_camera_client_approved" invisible="1"/>
+                <field name="is_camera_contractor_approved" invisible="1"/>
+
+                <field name="is_site_client_approved" invisible="1"/>
+                <field name="is_site_contractor_approved" invisible="1"/>
+
+                <field name="is_wireless_client_approved" invisible="1"/>
+                <field name="is_wireless_contractor_approved" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='ticket_type_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            
+             <xpath expr="//field[@name='region_id']" position="before">
+                <field name="cm_ref"/>
+            </xpath>
+
+            <xpath expr="//field[@name='description']" position="after">
+                <notebook>
+                    <page string="Checklist" invisible="1">
+                        <group col="4">
+                            <field name="is_pole"/>
+                            <field name="is_outdoor"/>
+                            <field name="is_battery"/>
+                            <field name="is_civil"/>
+                            <field name="is_optical"/>
+                            <field name="is_attenuation"/>
+                            <field name="is_camera"/>
+                            <field name="is_site"/>
+                            <field name="is_wireless"/>
+                        </group>
+                    </page>
+                    <page string="Material Installed">
+                        <field name="material_ids">
+                            <tree editable="bottom">
+                                <field name="material_name"/>
+                                <field name="material_type"/>
+                                <field name="material_brand"/>
+                                <field name="material_model"/>
+                                <field name="material_serial_number"/>
+                                <field name="material_qty"/>
+                                <field name="item_status"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Parts">
+                        <field name="part_ids">
+                            <tree editable="bottom">
+                                <field name="is_added" invisible="1"/>
+                                <field name="type"/>
+                                <field name="product_id" domain="[('id', 'in', product_ids)]"/>
+                                <field name="name"/>
+                                <field name="brand"/>
+                                <field name="model"/>
+                                <field name="lot_id"/>
+                                <field name="qty"/>
+                                <field name="uom_id"/>
+                                <field name="receive_qty" attrs="{'invisible': [('type', '!=', 'remove')]}"/>
+                                <field name="delivered_qty" attrs="{'invisible': [('type', '!=', 'add')]}"/>
+                                <field name="received_id" invisible="1"/>
+                                <field name="delivered_id" invisible="1"/>
+                                <field name="is_picking_created" invisible="1"/>
+                                <field name="product_ids" widget="many2many_tags" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Operations">
+                        <group col="4">
+                            <field name="location_src_id"/>
+                            <field name="location_dest_id"/>
+                        </group>
+                    </page>
+                    <page string="Material Information">
+                        <group>
+                            <field name="product_info_ids" widget="many2many_tags"/>
+                        </group>
+                    </page>
+                    <page string="Pole and Pole Foundation" attrs="{'invisible': [('is_pole', '=', False)]}">
+                        <field name="pole_lines" >
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="pole_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="pole_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="pole_con_name"/>
+                                <field name="pole_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="pole_cl_name"/>
+                                <field name="pole_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Pole Contactor Approval" class="oe_highlight" type="object" name="action_pole_contractor_approve"  attrs="{'invisible': [('is_pole_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_pole_contractor"/>
+                            <button string="Pole Client Approval" class="oe_highlight" type="object" name="action_pole_client_approve"  attrs="{'invisible': [('is_pole_client_approved', '=', True)]}" groups="helpdesk_customization.group_pole_client"/>
+                        </group>
+                    </page>
+                    <page string="Outdoor Closures" attrs="{'invisible': [('is_outdoor', '=', False)]}">
+                        <field name="outdoor_lines" >
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="outdoor_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="outdoor_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="outdoor_con_name"/>
+                                <field name="outdoor_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="outdoor_cl_name"/>
+                                <field name="outdoor_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Outdoor Contactor Approval" class="oe_highlight" type="object" name="action_outdoor_contractor_approve"  attrs="{'invisible': [('is_outdoor_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_outdoor_contractor"/>
+                            <button string="Outdoor Client Approval" class="oe_highlight" type="object" name="action_outdoor_client_approve"  attrs="{'invisible': [('is_outdoor_client_approved', '=', True)]}" groups="helpdesk_customization.group_outdoor_client"/>
+                        </group>
+                    </page>
+                    <page string="Battery Closures" attrs="{'invisible': [('is_battery', '=', False)]}">
+                        <field name="battery_lines" >
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="battery_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="battery_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="battery_con_name"/>
+                                <field name="battery_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="battery_cl_name"/>
+                                <field name="battery_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Battery Contactor Approval" class="oe_highlight" type="object" name="action_battery_contractor_approve"  attrs="{'invisible': [('is_battery_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_battery_contractor"/>
+                            <button string="Battery Approval" class="oe_highlight" type="object" name="action_battery_client_approve"  attrs="{'invisible': [('is_battery_client_approved', '=', True)]}" groups="helpdesk_customization.group_battery_client"/>
+                        </group>
+                    </page>
+                    <page string="Civil and Fiber Network" attrs="{'invisible': [('is_civil', '=', False)]}">
+                        <field name="civil_lines" >
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="civil_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="civil_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="civil_con_name"/>
+                                <field name="civil_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="civil_cl_name"/>
+                                <field name="civil_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Civil Contactor Approval" class="oe_highlight" type="object" name="action_civil_contractor_approve"  attrs="{'invisible': [('is_civil_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_civil_contractor"/>
+                            <button string="Civil Client Approval" class="oe_highlight" type="object" name="action_civil_client_approve"  attrs="{'invisible': [('is_civil_client_approved', '=', True)]}" groups="helpdesk_customization.group_civil_client"/>
+                        </group>
+                    </page>
+                    <page string="Optical Testing: Fiber Optical Length Measurement" attrs="{'invisible': [('is_optical', '=', False)]}">
+                        <field name="fibre_lines">
+                            <tree editable="bottom">
+                                <field name="fibre_no" width="10%"/>
+                                <field name="fif_nm" width="30%"/>
+                                <field name="fif_nm_units" width="15%"/>
+                                <field name="six_nm" width="30%"/>
+                                <field name="six_nm_units" width="15%"/>
+                            </tree>
+                        </field>
+                        <field name="fibre_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="fibre_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="fibre_con_name"/>
+                                <field name="fibre_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="fibre_cl_name"/>
+                                <field name="fibre_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Fibre Contactor Approval" class="oe_highlight" type="object" name="action_fibre_contractor_approve"  attrs="{'invisible': [('is_fibre_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_fibre_contractor"/>
+                            <button string="Fibre Client Approval" class="oe_highlight" type="object" name="action_fibre_client_approve"  attrs="{'invisible': [('is_fibre_client_approved', '=', True)]}" groups="helpdesk_customization.group_fibre_client"/>
+                        </group>
+                    </page>
+                    <page string="Optical Testing: Attenuation Test" attrs="{'invisible': [('is_attenuation', '=', False)]}">
+                        <field name="attenuation_lines">
+                            <tree editable="bottom">
+                                <field name="fibre_no" width="10%"/>
+                                <field name="fif_nm_tx" width="10%"/>
+                                <field name="fif_nm_rx" width="10%"/>
+                                <field name="fif_nm_section" width="25%"/>
+                                <field name="six_nm_tx" width="10%"/>
+                                <field name="six_nm_rx" width="10%"/>
+                                <field name="six_nm_section" width="25%"/>
+                            </tree>
+                        </field>
+
+                        <field name="requirements_lines">
+                            <tree editable="bottom">
+                                <field name="requirement"/>
+                                <field name="fif_nm"/>
+                                <field name="six_nm"/>
+                            </tree>
+                        </field>
+
+                        <field name="attenuation_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="attenuation_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="attenuation_con_name"/>
+                                <field name="attenuation_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="attenuation_cl_name"/>
+                                <field name="attenuation_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Attenuation Contactor Approval" class="oe_highlight" type="object" name="action_attenuation_contractor_approve"  attrs="{'invisible': [('is_attenuation_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_attenuation_contractor"/>
+                            <button string="Attenuation Client Approval" class="oe_highlight" type="object" name="action_attenuation_client_approve"  attrs="{'invisible': [('is_attenuation_client_approved', '=', True)]}" groups="helpdesk_customization.group_attenuation_client"/>
+                        </group>
+                    </page>
+                    <page string="Cameras" attrs="{'invisible': [('is_camera', '=', False)]}">
+                        <field name="camera_lines">
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="camera_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="camera_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="camera_con_name"/>
+                                <field name="camera_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="camera_cl_name"/>
+                                <field name="camera_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Camera Contactor Approval" class="oe_highlight" type="object" name="action_camera_contractor_approve"  attrs="{'invisible': [('is_camera_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_cameras_contractor"/>
+                            <button string="Camera Client Approval" class="oe_highlight" type="object" name="action_camera_client_approve"  attrs="{'invisible': [('is_camera_client_approved', '=', True)]}" groups="helpdesk_customization.group_cameras_client"/>
+                        </group>
+                    </page>
+                    <page string="Site Power" attrs="{'invisible': [('is_site', '=', False)]}">
+                        <field name="site_lines">
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="site_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="site_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="site_con_name"/>
+                                <field name="site_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="site_cl_name"/>
+                                <field name="site_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Site Contactor Approval" class="oe_highlight" type="object" name="action_site_contractor_approve"  attrs="{'invisible': [('is_site_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_site_contractor"/>
+                            <button string="Site Client Approval" class="oe_highlight" type="object" name="action_site_client_approve"  attrs="{'invisible': [('is_site_client_approved', '=', True)]}" groups="helpdesk_customization.group_site_client"/>
+                        </group>
+                    </page>
+                    <page string="Wireless System" attrs="{'invisible': [('is_wireless', '=', False)]}">
+                        <field name="wireless_lines">
+                            <tree editable="bottom">
+                                <field name="site_ins"/>
+                                <field name="is_ok"/>
+                                <field name="is_not_ok"/>
+                                <field name="remarks"/>
+                            </tree>
+                        </field>
+                        <field name="wireless_pic" widget="many2many_binary"/>
+                        <group>
+                            <field name="wireless_comment"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="wireless_con_name"/>
+                                <field name="wireless_con_sig"/>
+                            </group>
+                            <group>
+                                <field name="wireless_cl_name"/>
+                                <field name="wireless_cl_sig"/>
+                            </group>
+                        </group>
+                        <group col="4">
+                            <button string="Wireless Contactor Approval" class="oe_highlight" type="object" name="action_wireless_contractor_approve"  attrs="{'invisible': [('is_wireless_contractor_approved', '=', True)]}" groups="helpdesk_customization.group_wireless_contractor"/>
+                            <button string="Wireless Client Approval" class="oe_highlight" type="object" name="action_wireless_client_approve"  attrs="{'invisible': [('is_wireless_client_approved', '=', True)]}" groups="helpdesk_customization.group_wireless_client"/>
+                        </group>
+                    </page>
+
+                </notebook>
+            </xpath>
+
+        </field>
+    </record>
+
+    <menuitem id="helpdesk.helpdesk_ticket_type_menu" action="helpdesk.helpdesk_ticket_type_action"
+              sequence="1" parent="helpdesk.helpdesk_menu_config" name="Alarm Type"/>
+
+    <record id="helpdesk.helpdesk_ticket_type_action" model="ir.actions.act_window">
+        <field name="name">Alarm Type</field>
+        <field name="res_model">helpdesk.ticket.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No types found. Let's create one!
+            </p><p>
+            Types are perfect to categorize your tickets.
+        </p>
+        </field>
+    </record>
+
+    <record id="view_alarm_type_form" model="ir.ui.view">
+        <field name="name">alarm.type.form</field>
+        <field name="model">alarm.type</field>
+        <field name="arch" type="xml">
+            <form string="Alarm Type">
+                <sheet>
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="alarm_ids" widget="many2many_tags" string="Alarm Types"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_alarm_type_tree" model="ir.ui.view">
+        <field name="name">alarm.type.tree</field>
+        <field name="model">alarm.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alarm_ids" widget="many2many_tags" string="Alarm Types"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_alarm_type_search" model="ir.ui.view">
+        <field name="name">alarm.type.search</field>
+        <field name="model">alarm.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_alarm_type_view" model="ir.actions.act_window">
+        <field name="name">Alarm Name</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alarm.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_alarm_type_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Record Found. Let's Create..........
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_alarm_type"
+              name="Alarm Name"
+              parent="helpdesk.helpdesk_menu_config"
+              action="action_alarm_type_view"
+              sequence="12"/>
+
+</odoo>

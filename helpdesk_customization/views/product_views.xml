@@ -1,0 +1,89 @@
+<odoo>
+
+    <record id="product_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="ip_address"/>
+                <field name="item_type"/>
+                <field name="item_brands" widget="many2many_tags"/>
+                <field name="item_models" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.model.form</field>
+            <field name="model">product.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+    <record id="product_template_list_view" model="ir.ui.view">
+        <field name="name">product.model.list</field>
+        <field name="model">product.model</field>
+        <field name="arch" type="xml">
+            <tree string="Item Models">
+                <field name="name" string="Item Model"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_model_action_form" model="ir.actions.act_window">
+        <field name="name">Item Model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="product_template_list_menuyyyy"
+              name="Item Model"
+              parent="stock.menu_stock_config_settings"
+              action="product_model_action_form"
+              sequence="10"/>
+    
+    <record id="product_brand_form_view" model="ir.ui.view">
+            <field name="name">product.brand.form</field>
+            <field name="model">product.brand</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" string="Name:"/>
+                            <field name="model" string="Model Name:" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+    <record id="product_brand_list_view" model="ir.ui.view">
+        <field name="name">product.brand.list</field>
+        <field name="model">product.brand</field>
+        <field name="arch" type="xml">
+            <tree string="Item Brand">
+                <field name="name" string="Item Brands"/>
+                <field name="model" string="Item Models" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_brand_action_form" model="ir.actions.act_window">
+        <field name="name">Item Brand</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.brand</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="product_brand_list_menuyyyy"
+              name="Item Brand"
+              parent="stock.menu_stock_config_settings"
+              action="product_brand_action_form"
+              sequence="10"/>
+
+</odoo>

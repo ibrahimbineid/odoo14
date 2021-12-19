@@ -1,0 +1,1638 @@
+<odoo>
+
+    <template id="custom_session_header_footer">
+        <t t-set="company" t-value="user.company_id"/>
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">,
+            <div class="row">
+                <div class="col-3 mb4">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
+                </div>
+                <div class="col-9 text-right" t-field="company.report_header" name="moto"/>
+            </div>
+            <!--            <div t-if="company.logo or company.report_header" class="row zero_min_height">-->
+            <!--                <div class="col-12">-->
+            <!--                    <div style="border-bottom: 1px solid black;"/>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <!--            <div class="row">-->
+            <!--                <div class="col-6" name="company_address">-->
+            <!--                    <div t-field="company.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"/>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+        </div>
+
+        <!--        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">-->
+        <!--            <div class="pt-5">-->
+        <!--                &lt;!&ndash; This div ensures that the address is not cropped by the header. &ndash;&gt;-->
+        <!--                <t t-call="web.address_layout"/>-->
+        <!--            </div>-->
+        <!--            <t t-raw="0"/>-->
+        <!--        </div>-->
+
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            <div class="text-center" style="border-top: 1px solid black;">
+                <ul class="list-inline mb4">
+                    <!-- using the list-inline-item class from bootstrap causes weird behaviours in pdf report adding d-inline class fixes the problem-->
+                    <li t-if="company.phone" class="list-inline-item d-inline"><span class="o_force_ltr" t-field="company.phone"/></li>
+                    <li t-if="company.email" class="list-inline-item d-inline"><span t-field="company.email"/></li>
+                    <li t-if="company.website" class="list-inline-item d-inline"><span t-field="company.website"/></li>
+                    <li t-if="company.vat" class="list-inline-item d-inline"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                </ul>
+                <div name="financial_infos">
+                    <span t-field="company.report_footer"/>
+                </div>
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page: <span class="page"/> / <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template id="report_maintenance_document_inh">
+        <t t-call="web.html_container">
+            <!--            <t t-call="web.external_layout">-->
+            <t t-foreach="docs" t-as="o">
+
+                <div class="article o_report_layout_standard" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                    <t t-call="helpdesk_customization.custom_session_header_footer"/>
+
+                    <div class="page" >
+                        <t t-if="o.is_pole">
+                            <div class="text-center">
+                                <h2>
+                                    Pole and Pole Foundation
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        Pole and Pole Foundation Physical inspection
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.pole_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.pole_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.pole_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.pole_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.pole_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.pole_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.pole_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.pole_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.pole_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.pole_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--                            <div class="container row" style="margin-top:1em;margin-left:1em;float:right; font-size:15px;">-->
+                            <!--                                <div class="col-12">-->
+                            <!--                                    <strong><span >Name:</span> </strong><span t-field="o.pole_con_name"/><br/>-->
+                            <!--                                    <strong><span>Signature:</span> </strong><span t-field="o.pole_sig"/>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                        </t>
+                        <t t-if="o.is_outdoor">
+                            <t t-if="o.is_pole">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <div class="text-center">
+                                <h2>
+                                    Outdoor Closures
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        Outdoor Closure Physical Inspection
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.outdoor_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.outdoor_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.outdoor_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.outdoor_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.outdoor_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.outdoor_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.outdoor_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.outdoor_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.outdoor_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.outdoor_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                        <t t-if="o.is_battery">
+                            <!--                            <t t-if="o.pole_lines or outdoor_lines">-->
+                            <t t-if="o.is_pole or o.is_outdoor">
+                                <p style="page-break-after: always;"/>
+                            </t>
+
+                            <div class="text-center">
+                                <h2>
+                                    Battery Closures
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        Battery Closure Physical Inspection
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.battery_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.battery_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.battery_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.battery_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.battery_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.battery_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.battery_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.battery_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.battery_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.battery_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                        <t t-if="o.is_civil">
+                            <t t-if="o.is_pole or o.is_outdoor or o.is_battery">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <div class="text-center">
+                                <h2>
+                                    Civil and Fiber Network
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        OSP Network Cable Route Identification (Duct, Fiber Cable, Mini Manholes)
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.civil_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.civil_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.civil_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.civil_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.civil_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.civil_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.civil_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.civil_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.civil_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.civil_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                        <t t-if="o.is_optical">
+                            <t t-if="o.is_pole or o.is_civil or o.is_battery or o.is_outdoor">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <h4>
+                                Optical Testing: Fiber Optical Length Measurement
+                            </h4>
+                            <!--                            <div class="text-center">-->
+                            <!--                                <h2>-->
+                            <!--                                    Pole and Pole Foundation-->
+                            <!--                                </h2>-->
+                            <!--                            </div>-->
+                            <table class="table table-sm o_main_table" style="font-size:13px;">
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="5">
+                                        <h5>Fibre Optical Length Measurement</h5>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Link #
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Site A:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        FOC Route:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Site B:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Region:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Date:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                            </table>
+                            <span style="text-decoration:underline;border-bottom: 1px solid #000;font-size:15px;font-weight:bold;">Equipment Used:</span>
+                            <br/>
+                            <table class="table table-sm o_main_table" style="font-size:10px;">
+                                <tr class="text-center">
+                                    <td style="color:white;border:none;">Type</td>
+                                    <td style="border:1px solid black;font-weight:bold;">Type</td>
+                                    <td style="border:1px solid black;font-weight:bold;">Serial No</td>
+                                    <td style="border:1px solid black;font-weight:bold;">Calibration Date</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">OTDR</td>
+                                    <td style="color:white;border:1px solid black;">Type</td>
+                                    <td style="color:white;border:1px solid black;">Type</td>
+                                    <td style="color:white;border:1px solid black;">Type</td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-sm o_main_table" style="font-size:10px;">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center"><strong>Fibre No.</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" colspan="2"><strong>1550nM</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" colspan="2"><strong>1625nM</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="i" t-value="0"/>
+
+                                    <tr t-foreach="o.fibre_lines" t-as="p_line">
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;width:10%;">
+                                            <span t-esc="i"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm_units"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm_units"/>
+                                        </td>
+                                    </tr>
+                                    <t t-set="count" t-value="24-i"/>
+                                    <tr t-foreach="count" t-as="emp_line">
+                                        <!--                                        <span t-esc="emp_line"/>-->
+                                        <!--                                        <t t-if="emp_line == 1">-->
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black; width:10%;">
+                                            <span t-esc="i"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.fibre_lines[0].fif_nm"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.fibre_lines[0].fif_nm_units"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.fibre_lines[0].six_nm"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.fibre_lines[0].six_nm_units"/>
+                                        </td>
+                                        <!--                                        </t>-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table" style="font-size:14px;">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.fibre_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.fibre_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.fibre_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.fibre_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.fibre_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.fibre_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.fibre_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.fibre_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <t t-if="o.is_attenuation">
+                            <!--                            <t t-if="o.pole_lines or o.civil_lines or o.battery_lines or o.outdoor_lines or o.fibre_lines">-->
+                            <t t-if="o.is_pole or o.is_civil or o.is_battery or o.is_outdoor or o.is_optical">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <h4>
+                                Attenuation Test:
+                            </h4>
+                            <table class="table table-sm o_main_table" style="font-size:13px;">
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="5">
+                                        <h5>Attenuation Link Test Report</h5>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Link #
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Site A:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        FOC Route:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Site B:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Region:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;" colspan="2">
+                                        Location:
+                                    </td>
+
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Date:
+                                    </td>
+                                    <td style="border:2px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--                            <br/>-->
+                            <!--                            <br/>-->
+                            <!--                            <table class="table table-sm o_main_table">-->
+                            <!--                                <tr class="text-center">-->
+                            <!--                                    <td style="color:white;border:none;">Type</td>-->
+                            <!--                                    <td style="border:1px solid black;font-weight:bold;">Type</td>-->
+                            <!--                                    <td style="border:1px solid black;font-weight:bold;">Serial No</td>-->
+                            <!--                                    <td style="border:1px solid black;font-weight:bold;">Calibration Date</td>-->
+                            <!--                                </tr>-->
+                            <!--                                <tr class="text-center">-->
+                            <!--                                    <td style="border:1px solid black;font-weight:bold;">OTDR</td>-->
+                            <!--                                   <td style="color:white;border:1px solid black;">Type</td>-->
+                            <!--                                   <td style="color:white;border:1px solid black;">Type</td>-->
+                            <!--                                   <td style="color:white;border:1px solid black;">Type</td>-->
+                            <!--                                </tr>-->
+                            <!--                            </table>-->
+
+                            <table class="table table-sm o_main_table" style="font-size:10px;">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th rowspan="2" name="th_sm_si" style="border:1px solid black;" class="text-center"><strong>Fibre No.</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" colspan="3"><strong>1550nM</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" colspan="3"><strong>1625nM</strong></th>
+                                    </tr>
+                                    <tr>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" ><strong>Tx(dB)</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" ><strong>Rx(dB)</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" ><strong>Section Loss (dB)</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" ><strong>Tx(dB)</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" ><strong>Rx (dB)</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" ><strong>Section Loss (dB)</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="i" t-value="0"/>
+                                    <tr t-foreach="o.attenuation_lines" t-as="p_line">
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;width:10%;">
+                                            <span t-esc="i"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm_rx"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm_section"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm_rx"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm_section"/>
+                                        </td>
+
+                                    </tr>
+                                    <t t-set="count" t-value="24-i"/>
+                                    <tr t-foreach="count" t-as="emp_line">
+                                        <!--                                        <span t-esc="emp_line"/>-->
+                                        <!--                                        <t t-if="emp_line == 1">-->
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black; width:10%;">
+                                            <span t-esc="i"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <td for="th_sm_si" class="text-center" style="border:1px solid black;color:white;">
+                                            <span t-field="o.attenuation_lines[0].six_nm_tx"/>
+                                        </td>
+                                        <!--                                        </t>-->
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-sm o_main_table" style="font-size:10px;">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th rowspan="2" name="th_sm_si" style="border:1px solid black;" class="text-center"><strong>Requirements</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center"><strong>1550nM</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center" ><strong>1625nM</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.requirements_lines" t-as="p_line">
+
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.requirement"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.fif_nm"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <span t-field="p_line.six_nm"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <table class="table table-sm o_main_table" style="font-size:14px;">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.attenuation_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.attenuation_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.attenuation_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.attenuation_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.attenuation_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.attenuation_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.attenuation_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.attenuation_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <t t-if="o.is_camera">
+                            <!--                            <t t-if="o.pole_lines or o.civil_lines or o.battery_lines or o.outdoor_lines or o.fibre_lines or o.attenuation_lines">-->
+                            <t t-if="o.is_pole or o.is_civil or o.is_battery or o.is_outdoor or o.is_optical or o.is_attenuation">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <div class="text-center">
+                                <h2>
+                                    Cameras
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        CCTV Camera Physical Inspection
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.camera_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.camera_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.camera_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.camera_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.camera_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.camera_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.camera_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.camera_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.camera_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.camera_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <t t-if="o.is_site">
+                            <!--                            <t t-if="o.pole_lines or o.civil_lines or o.battery_lines or o.outdoor_lines or o.fibre_lines or o.attenuation_lines or o.camera_lines">-->
+                            <t t-if="o.is_pole or o.is_civil or o.is_battery or o.is_outdoor or o.is_optical or o.is_attenuation or o.is_camera">
+                                <p style="page-break-after: always;"/>
+                            </t>
+
+                            <div class="text-center">
+                                <h2>
+                                    Site Power
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        Site Power System Physical Inspection (Solar Panels, Solar Energy System, Batteries and SECO
+                                        Cabinet)
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.site_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.site_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.site_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.site_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.site_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.site_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.site_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.site_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.site_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.site_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <t t-if="o.is_wireless">
+                            <t t-if="o.is_pole or o.is_civil or o.is_battery or o.is_outdoor or o.is_optical or o.is_attenuation or o.is_camera or o.is_site">
+                                <p style="page-break-after: always;"/>
+                            </t>
+                            <div class="text-center">
+                                <h2>
+                                    Wireless System
+                                </h2>
+                            </div>
+                            <table class="table table-sm o_main_table">
+                                <tr>
+                                    <td style="border:1px solid black;font-weight:bold; background-color:#E8E8E8;" colspan="6">
+                                        Network Equipment (Wireless System)
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Location:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.location_id.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Site Name:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Project Descriptions:
+                                    </td>
+                                    <td style="border:1px solid black; color:white;">
+                                        Location
+                                    </td>
+                                </tr>
+                                <tr class="text-center" rowspan="2">
+                                    <td rowspan="2" style="border:1px solid black;font-weight:bold;">
+                                        Site Coordinates:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Longitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.longitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Description of Label at Pole:
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+
+                                    <td style="border:1px solid black;font-weight:bold;">
+                                        Latitude:
+                                    </td>
+                                    <td style="border:1px solid black;">
+                                        <span t-field="o.latitude"/>
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;" colspan="2">
+                                        Pole Type (Height):
+                                    </td>
+                                    <td style="border:1px solid black;font-weight:bold;color:white;">
+                                        Latitude:
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+
+                            <table class="table table-sm o_main_table">
+                                <thead class="thead-light">
+                                    <tr >
+                                        <th name="th_sm_si" style="border:1px solid black;" class="text-center" width="70%"><strong>Site Inspection</strong></th>
+                                        <th name="th_sm_o" style="border:1px solid black;" class="text-center" width="5%"><strong>Ok</strong></th>
+                                        <th name="th_sm_no" style="border:1px solid black;" class="text-center text-nowrap" width="5%"><strong>Not Ok</strong></th>
+                                        <th name="th_sm_re" style="border:1px solid black;" class="text-center" width="20%"><strong>Remarks</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr t-foreach="o.wireless_lines" t-as="p_line">
+                                        <td for="th_sm_si" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.site_ins"/>
+                                        </td>
+                                        <td for="th_sm_o" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_ok"/>-->
+                                            <t t-if="p_line.is_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_no" class="text-center" style="border:1px solid black;">
+                                            <!--                                            <span t-field="p_line.is_not_ok"/>-->
+                                            <t t-if="p_line.is_not_ok">
+                                                <span>Yes</span>
+                                            </t>
+                                        </td>
+                                        <td for="th_sm_re" class="text-left" style="border:1px solid black;">
+                                            <span t-field="p_line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <h6>Take photo evidence and detailed notes of any deficiencies found</h6>
+                            <span>Additional Comments, please note here:</span>
+                            <div style="width:100%;">
+                                <span t-field="o.wireless_comment" style="border-bottom:1px solid black;"/>
+                            </div>
+                            <br/>
+                            <br/>
+                            <table class="table table-sm o_main_table">
+                                <tr >
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        Contractor Representative
+                                    </td>
+                                    <td colspan="2" style="border:2px solid black;font-weight:bold;">
+                                        MoI Representative
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.wireless_con_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.wireless_con_sig"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Signature
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.wireless_cl_sig">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.wireless_cl_sig"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.wireless_con_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.wireless_con_name"/>
+                                    </td>
+                                    <td style="border:2px solid black;font-weight:bold;">
+                                        Name
+                                    </td>
+                                    <td style="border:2px solid black;">
+                                        <t t-if=" not o.wireless_cl_name">
+                                            <span style="color:white;">Signature</span>
+                                        </t>
+                                        <span t-field="o.wireless_cl_name"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                    </div>
+                </div>
+            </t>
+            <!--            </t>-->
+        </t>
+    </template>
+</odoo>

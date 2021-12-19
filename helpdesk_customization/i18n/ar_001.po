@@ -1,0 +1,2725 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_customization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-18 08:48+0000\n"
+"PO-Revision-Date: 2021-11-18 08:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__fif_nm_rx
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__fif_nm_rx
+msgid "(1550nM) Rx(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__fif_nm_section
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__fif_nm_section
+msgid "(1550nM) Section Loss(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__fif_nm_tx
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__fif_nm_tx
+msgid "(1550nM) Tx(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__six_nm_rx
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__six_nm_rx
+msgid "(1625nM) Rx(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__six_nm_section
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__six_nm_section
+msgid "(1625nM) Section Loss(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__six_nm_tx
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__six_nm_tx
+msgid "(1625nM) Tx(db)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__fif_nm
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__fif_nm
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__fif_nm
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_test_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.optical_test_view_form
+msgid "1550nM"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__fif_nm_units
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__fif_nm_units
+msgid "1550nM(Unit)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__fif_nm
+msgid "1550nm"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__six_nm
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__six_nm
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__six_nm
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_test_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.optical_test_view_form
+msgid "1625nM"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__six_nm_units
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__six_nm_units
+msgid "1625nM(Units)"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__six_nm
+msgid "1625nm"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid "<span class=\"s_website_form_label_content\">Attachment(s)</span>"
+msgstr "مرفق (ق):"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">City</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">المدينة:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid "<span class=\"s_website_form_label_content\">Description</span>"
+msgstr "<span class=\"s_website_form_label_content\">الوصف:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Location</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">الموقع:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Region</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">المنطقة:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Sites</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">الموقع الدقيق:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Subject</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">الموضوع:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Your Email</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">البريد الإلكتروني:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid ""
+"<span class=\"s_website_form_label_content\">Your Name</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr "<span class=\"s_website_form_label_content\">الاسم:</span>\n"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<span style=\"color:white;\">Signature</span>"
+msgstr "التوقيع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid ""
+"<span style=\"text-decoration:underline;border-bottom: 1px solid #000;font-size:15px;font-weight:bold;\">Equipment Used:</span>\n"
+"                            <br/>"
+msgstr "المعدات المستخدمة:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<span>Additional Comments, please note here:</span>"
+msgstr "تعليقات إضافية ، يرجى ملاحظة ما يلي:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<span>Yes</span>"
+msgstr "نعم:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>1550nM</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>1625nM</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Fibre No.</strong>"
+msgstr "رقم الألياف:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Not Ok</strong>"
+msgstr "ليس جيدا"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Ok</strong>"
+msgstr "جيد"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Remarks</strong>"
+msgstr "ملاحظات"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Requirements</strong>"
+msgstr "متطلبات"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Rx (dB)</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Rx(dB)</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Section Loss (dB)</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Site Inspection</strong>"
+msgstr "فحص الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "<strong>Tx(dB)</strong>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__action
+msgid "Action"
+msgstr "الإجراء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields.selection,name:helpdesk_customization.selection__helpdesk_parts_line__type__add
+msgid "Add"
+msgstr "إضافة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.attenuation_requirement_action
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.attenuation_testing_action
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.contact_name_action
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.optical_testing_action
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.petrol_site_action
+msgid "Add a new Contractor"
+msgstr "إضافة مقاول جديد"
+
+#. module: helpdesk_customization
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.site_group_action
+msgid "Add a new Site Group"
+msgstr "أضف مجموعة مواقع جديدة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.site_type_action
+msgid "Add a new equipment category"
+msgstr "أضف فئة معدات جديدة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__alarm_ids
+msgid "Alarm"
+msgstr "التنبيه"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.action_alarm_type_view
+#: model:ir.ui.menu,name:helpdesk_customization.menu_alarm_type
+msgid "Alarm Name"
+msgstr "اسم التنبيه"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_alarm_type
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.view_alarm_type_form
+msgid "Alarm Type"
+msgstr "نوع التنبيه"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.view_alarm_type_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.view_alarm_type_tree
+msgid "Alarm Types"
+msgstr "أنواع التنبيه"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__image
+msgid "Attachment"
+msgstr "المرفقات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Attenuation Client Approval"
+msgstr "موافقة العميل"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_attenuation_client
+msgid "Attenuation Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_attenuation_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_attenuation_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_attenuation_client_approved
+msgid "Attenuation Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Attenuation Contactor Approval"
+msgstr "موافقة المقاول"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_attenuation_contractor
+msgid "Attenuation Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_attenuation_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_attenuation_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_attenuation_contractor_approved
+msgid "Attenuation Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__attenuation_line_me_id
+msgid "Attenuation Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_lines
+msgid "Attenuation Lines"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Attenuation Link Test Report"
+msgstr "تقرير اختبار الارتباط"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_pic
+msgid "Attenuation Pic"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.attenuation_requirement_action
+#: model:ir.actions.act_window,name:helpdesk_customization.attenuation_testing_action
+msgid "Attenuation Test"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Attenuation Test:"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Battery Approval"
+msgstr "اعتماد البطارية"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_battery_client
+msgid "Battery Client Approve"
+msgstr "موافقة عميل البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_battery_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_battery_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_battery_client_approved
+msgid "Battery Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Battery Closure Physical Inspection"
+msgstr "التفتيش المادي لإغلاق البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_battery
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_battery
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_battery
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Battery Closures"
+msgstr "إغلاق البطارية"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Battery Contactor Approval"
+msgstr "اعتماد موصل البطارية"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_battery_contractor
+msgid "Battery Contractor Approve"
+msgstr "تمت الموافقة على مقاول البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_battery_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_battery_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_battery_contractor_approved
+msgid "Battery Contractor Approved"
+msgstr "تمت الموافقة على مقاول البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__battery_line_me_id
+msgid "Battery Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_lines
+msgid "Battery Lines"
+msgstr "خطوط البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_pic
+msgid "Battery Pic"
+msgstr "صورة البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__brand
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_brand
+msgid "Brand"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "CCTV Camera Physical Inspection"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Calibration Date"
+msgstr "تاريخ المعايرة:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Camera Client Approval"
+msgstr "موافقة عميل الكاميرا"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_camera_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_camera_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_camera_client_approved
+msgid "Camera Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Camera Contactor Approval"
+msgstr "موافقة مقاول الكاميرا"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_camera_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_camera_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_camera_contractor_approved
+msgid "Camera Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__camera_line_me_id
+msgid "Camera Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_lines
+msgid "Camera Lines"
+msgstr "خطوط الكاميرا"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_pic
+msgid "Camera Pic"
+msgstr "صورة الكاميرا"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_camera
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Cameras"
+msgstr "الكاميرات"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_cameras_client
+msgid "Cameras Client Approve"
+msgstr "موافقة عميل الكاميرات"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_cameras_contractor
+msgid "Cameras Contractor Approve"
+msgstr "اعتماد مقاول الكاميرات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__cctv_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__cctv_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__cctv_camera
+msgid "Cctv Camera"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__cctv_installed
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__cctv_installed
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__cctv_installed
+msgid "Cctv Installed"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Checklist"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_civil
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_civil
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_civil
+msgid "Civil & Fiber Network"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Civil Client Approval"
+msgstr "موافقة العميل المدني"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_civil_client
+msgid "Civil Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_civil_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_civil_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_civil_client_approved
+msgid "Civil Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Civil Contactor Approval"
+msgstr "موافقة المقاول المدني"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_civil_contractor
+msgid "Civil Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_civil_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_civil_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_civil_contractor_approved
+msgid "Civil Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__civil_line_me_id
+msgid "Civil Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_lines
+msgid "Civil Lines"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_pic
+msgid "Civil Pic"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Civil and Fiber Network"
+msgstr "الشبكة المدنية وشبكة الألياف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_cl_name
+msgid "Client  OutdoorName"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_cl_name
+msgid "Client Attenuation Name"
+msgstr "أسم العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_cl_sig
+msgid "Client Attenuation Signature"
+msgstr "توقيع العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_cl_name
+msgid "Client Battery Name"
+msgstr "اسم بطارية العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_cl_sig
+msgid "Client Battery Signature"
+msgstr "توقيع بطارية العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_cl_name
+msgid "Client Camera Name"
+msgstr "اسم كاميرا العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_cl_sig
+msgid "Client Camera Signature"
+msgstr "توقيع كاميرا العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_cl_name
+msgid "Client Civil Name"
+msgstr "الاسم المدني للعميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_cl_sig
+msgid "Client Civil Signature"
+msgstr "التوقيع المدني للعميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_cl_name
+msgid "Client Fibre Name"
+msgstr "اسم فايبر العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_cl_sig
+msgid "Client Fibre Signature"
+msgstr "توقيع الفايبر للعميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_cl_sig
+msgid "Client Outdoor Signature"
+msgstr "توقيع العميل الخارجي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_cl_name
+msgid "Client Pole Name"
+msgstr "اسم عمود العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_cl_sig
+msgid "Client Pole Signature"
+msgstr "توقيع عمود العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_cl_name
+msgid "Client Site Name"
+msgstr "اسم موقع العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_cl_sig
+msgid "Client Site Signature"
+msgstr "توقيع موقع العميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_cl_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_cl_name
+msgid "Client Wireless Name"
+msgstr "اسم شبكة العميل اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_cl_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_cl_sig
+msgid "Client Wireless Signature"
+msgstr "التوقيع الشبكة اللاسلكية للعميل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_comment
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_comment
+msgid "Comments"
+msgstr "تعليقات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__alarm_name
+msgid "Components"
+msgstr "عناصر "
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.contact_name_action
+#: model:ir.ui.menu,name:helpdesk_customization.menu_contact_name
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_con_name
+msgid "Contractor Attenuation Name"
+msgstr "اسم المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__attenuation_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__attenuation_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__attenuation_con_sig
+msgid "Contractor Attenuation Signature"
+msgstr "توقيع المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_con_name
+msgid "Contractor Battery Name"
+msgstr "اسم بطارية المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__battery_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__battery_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__battery_con_sig
+msgid "Contractor Battery Signature"
+msgstr "توقيع بطارية المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_con_name
+msgid "Contractor Camera Name"
+msgstr "اسم كاميرا المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__camera_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__camera_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__camera_con_sig
+msgid "Contractor Camera Signature"
+msgstr "توقيع كاميرا المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_con_name
+msgid "Contractor Civil Name"
+msgstr "الاسم المدني للمقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__civil_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__civil_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__civil_con_sig
+msgid "Contractor Civil Signature"
+msgstr "توقيع المدني للمقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_con_name
+msgid "Contractor Fibre Name"
+msgstr "اسم ألياف المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_con_sig
+msgid "Contractor Fibre Signature"
+msgstr "توقيع ألياف المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__contractor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__contractor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__contractor_name
+msgid "Contractor Name"
+msgstr "اسم المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_con_name
+msgid "Contractor Outdoor Name"
+msgstr "اسم المقاول الخارجي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_con_sig
+msgid "Contractor Outdoor Signature"
+msgstr "توقيع المقاول الخارجي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_con_name
+msgid "Contractor Pole Name"
+msgstr "اسم عمود المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_con_sig
+msgid "Contractor Pole Signature"
+msgstr "توقيع عمود المقاول"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Contractor Representative"
+msgstr "ممثل المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_con_name
+msgid "Contractor Site Name"
+msgstr "اسم موقع المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_con_sig
+msgid "Contractor Site Signature"
+msgstr "توقيع موقع المقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_con_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_con_name
+msgid "Contractor wireless Name"
+msgstr "الاسم الشبكة اللاسلكية للمقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_con_sig
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_con_sig
+msgid "Contractor wireless Signature"
+msgstr "توقيع الشبكة اللاسلكية للمقاول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__counter_type
+msgid "Counter Type"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__create_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__create_uid
+msgid "Created by"
+msgstr "انشئ بواسطة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__create_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__date
+msgid "Date"
+msgstr "التاريخ "
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Date:"
+msgstr "التاريخ "
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_success_ir_ui_view
+#: model_terms:website.page,arch_db:helpdesk_customization.ticket_success
+msgid "Dear,"
+msgstr "عزيزي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_helpdesk_parts_line__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "وحدة القياس الافتراضية المستخدمة لجميع عمليات المخزون"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__delivered_id
+msgid "Delivered"
+msgstr "تم التوصيل "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__delivered_qty
+msgid "Delivered Qty"
+msgstr "الكمية المستلمة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Description of Label at Pole:"
+msgstr "وصف التسمية في العامود"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_location__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__display_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "FOC Route:"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Fibre Client Approval"
+msgstr "موافقة عميل الألياف"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_fibre_client
+msgid "Fibre Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_fibre_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_fibre_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_fibre_client_approved
+msgid "Fibre Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Fibre Contactor Approval"
+msgstr "موافقة مقاول الألياف"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_fibre_contractor
+msgid "Fibre Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_fibre_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_fibre_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_fibre_contractor_approved
+msgid "Fibre Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_contractor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_contractor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_contractor_name
+msgid "Fibre Contractor Name"
+msgstr "اسم مقاول الألياف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_info
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_info
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_info
+msgid "Fibre Info"
+msgstr "معلومات الألياف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__fibre_line_me_id
+msgid "Fibre Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_lines
+msgid "Fibre Lines"
+msgstr "خطوط الألياف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__fibre_no
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__fibre_no
+msgid "Fibre No"
+msgstr "رقم الألياف"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Fibre Optical Length Measurement"
+msgstr "قياس طول الألياف الضوئية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_pic
+msgid "Fibre Pic"
+msgstr "صورة الألياف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__fibre_site_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__fibre_site_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__fibre_site_name
+msgid "Fibre Site Name"
+msgstr "اسم موقع الألياف الضوئية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_helpdesk_ticket
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__helpdesk_ticket_id
+msgid "Helpdesk Ticket"
+msgstr "تذكرة مكتب المساعدة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_location__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__ip_address
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__ip_address
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__ip_address
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_product__ip_address
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__ip_address
+msgid "IP Address"
+msgstr "عنوان IP"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_needaction
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فإن الرسائل الجديدة تتطلب انتباهك"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_has_error
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم"
+
+#. module: helpdesk_customization
+#: model:ir.actions.report,name:helpdesk_customization.action_report_maintenance
+#: model:ir.actions.report,name:helpdesk_customization.action_report_ticket_helpdesk
+msgid "Inspection Report"
+msgstr "تقرير التفتيش"
+
+#. module: helpdesk_customization
+#: model:ir.actions.report,name:helpdesk_customization.action_report_maintenance_equipment
+msgid "Inspection Reports"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__is_added
+msgid "Is Added"
+msgstr "تمت إضافته"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_created
+msgid "Is Created"
+msgstr "تم إنشاؤه"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_is_follower
+msgid "Is Follower"
+msgstr "تابع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__is_picking_created
+msgid "Is Picking Created"
+msgstr "تم إنشاء الانتقاء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__issue
+msgid "Issue"
+msgstr "القضية"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.product_brand_action_form
+#: model:ir.ui.menu,name:helpdesk_customization.product_brand_list_menuyyyy
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_brand_list_view
+msgid "Item Brand"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_product__item_brands
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__item_brands
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_brand_list_view
+msgid "Item Brands"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.product_model_action_form
+#: model:ir.ui.menu,name:helpdesk_customization.product_template_list_menuyyyy
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_template_list_view
+msgid "Item Model"
+msgstr "موديل المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__model
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_product__item_models
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__item_models
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_brand_list_view
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_template_list_view
+msgid "Item Models"
+msgstr "نماذج المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_type
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_product__item_type
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template__item_type
+msgid "Item Type"
+msgstr "نوع المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_location____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_template____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type____last_update
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__write_uid
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_test__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_optical_test__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__write_date
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__latitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Latitude:"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Link #"
+msgstr "رابط"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Location"
+msgstr "الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__location_dest_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__location_dest_id
+msgid "Location Dest"
+msgstr "موقع الوجهة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__location_src_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__location_src_id
+msgid "Location Src"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Location:"
+msgstr "الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.custom_session_header_footer
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Longitude:"
+msgstr "خط الطول:"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: helpdesk_customization
+#: model:ir.module.category,name:helpdesk_customization.maintenance_access_groups_root
+msgid "Maintenance"
+msgstr "اعمال صيانة"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "معدات الصيانة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__maintenance_location_id
+msgid "Maintenance Location"
+msgstr "موقع الصيانة"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "طلب الصيانة"
+
+#. module: helpdesk_customization
+#: model:ir.ui.menu,name:helpdesk_customization.menu_requirement
+msgid "Manage Attenuation Requirements"
+msgstr "إدارة المتطلبات"
+
+#. module: helpdesk_customization
+#: model:ir.ui.menu,name:helpdesk_customization.menu_attenuation_testing
+msgid "Manage Attenuation Testing"
+msgstr "إدارة الاختبار"
+
+#. module: helpdesk_customization
+#: model:ir.module.category,description:helpdesk_customization.maintenance_access_groups_root
+msgid "Manage Maintenance Security"
+msgstr "إدارة أمن الصيانة"
+
+#. module: helpdesk_customization
+#: model:ir.ui.menu,name:helpdesk_customization.menu_optical_testing
+msgid "Manage Optical Testing"
+msgstr "إدارة الاختبار البصري"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Material Information"
+msgstr "معلومات المواد"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Material Installed"
+msgstr "المواد المثبته"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_line_me_id
+msgid "Material Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__material_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__materials_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__material_ids
+msgid "Materials Lines"
+msgstr "خطوط المواد"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "MoI Representative"
+msgstr "ممثل وزارة الداخلية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__model
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_model
+msgid "Model"
+msgstr "الموديل"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_brand_form_view
+msgid "Model Name:"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_contact_name__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_brand__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_product_model__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_group__name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_type__name
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.contact_name_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.contact_name_view_tree
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_group_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_group_view_tree
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_type_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_type_view_tree
+msgid "Name"
+msgstr "الأسم:"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.product_brand_form_view
+msgid "Name:"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Network Equipment (Wireless System)"
+msgstr "معدات الشبكة (نظام لاسلكي)"
+
+#. module: helpdesk_customization
+#: code:addons/helpdesk_customization/models/helpdesk.py:0
+#: code:addons/helpdesk_customization/models/helpdesk.py:0
+#: code:addons/helpdesk_customization/models/helpdesk.py:0
+#: code:addons/helpdesk_customization/models/helpdesk.py:0
+#: model:ir.model.fields.selection,name:helpdesk_customization.selection__material_line__item_status__new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__no_of_fibre
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__no_of_fibre
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__no_of_fibre
+msgid "No Of Fibre"
+msgstr "عدد الألياف:"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__no_of_ptz
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__no_of_ptz
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__no_of_ptz
+msgid "No Of Ptz"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.actions.act_window,help:helpdesk_customization.action_alarm_type_view
+msgid "No Record Found. Let's Create.........."
+msgstr "لا يوجد سجلات. قم بإنشاء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__is_not_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__is_not_ok
+msgid "Not Ok"
+msgstr "ليس جيد"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الإخطاء "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid ""
+"OSP Network Cable Route Identification (Duct, Fiber Cable, Mini Manholes)"
+msgstr ""
+"تحديد مسار كابل شبكة OSP (مجرى الهواء ، كابل الألياف ، غرف التفتيش الصغيرة)"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "OTDR"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__is_ok
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__is_ok
+msgid "Ok"
+msgstr "نعم"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Operations"
+msgstr "العمليات"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.optical_testing_action
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_requirements_view_tree
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_test_view_tree
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.optical_test_view_tree
+msgid "Optical Test"
+msgstr "اختبار بصري"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_attenuation
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_attenuation
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_attenuation
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Optical Testing: Attenuation Test"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_optical
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_optical
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_optical
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Optical Testing: Fiber Optical Length Measurement"
+msgstr "الاختبار البصري: قياس طول الألياف الضوئية"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Outdoor Client Approval"
+msgstr "موافقة العميل الخارجي"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_outdoor_client
+msgid "Outdoor Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_outdoor_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_outdoor_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_outdoor_client_approved
+msgid "Outdoor Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Outdoor Closure Physical Inspection"
+msgstr "التفتيش المادي للإغلاق في الخارج"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_outdoor
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_outdoor
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_outdoor
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Outdoor Closures"
+msgstr "عمليات الإغلاق الخارجية"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Outdoor Contactor Approval"
+msgstr "موافقة المقاول الخارجي"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_outdoor_contractor
+msgid "Outdoor Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_outdoor_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_outdoor_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_outdoor_contractor_approved
+msgid "Outdoor Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__outdoor_line_em_id
+msgid "Outdoor Line Em"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_lines
+msgid "Outdoor Lines"
+msgstr "الخطوط الخارجية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__outdoor_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__outdoor_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__outdoor_pic
+msgid "Outdoor Pic"
+msgstr "الصورة الخارجية"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+msgid "PM"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.custom_session_header_footer
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__part_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__part_ids
+msgid "Part"
+msgstr "جزء"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Parts"
+msgstr "اجزاء"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site_line__petrol_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.petrol_site_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.petrol_site_view_tree
+msgid "Petrol"
+msgstr "بنزين"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__petrol_lines
+msgid "Petrol Lines"
+msgstr "خطوط البنزين"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.petrol_site_action
+#: model:ir.ui.menu,name:helpdesk_customization.menu_petrol
+msgid "Petrolling"
+msgstr "الصيانة الدورية"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.petrol_report_action
+msgid "Petrolling Report"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_pole
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_pole
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_pole
+msgid "Pole & Pole Foundation"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Pole Client Approval"
+msgstr "الموافقة على عمود العميل "
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_pole_client
+msgid "Pole Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_pole_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_pole_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_pole_client_approved
+msgid "Pole Client Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Pole Contactor Approval"
+msgstr "موافقة مقاول العمود"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_pole_contractor
+msgid "Pole Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_pole_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_pole_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_pole_contractor_approved
+msgid "Pole Contractor Approved"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__pole_line_me_id
+msgid "Pole Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_lines
+msgid "Pole Lines"
+msgstr "خطوط العمود"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__pole_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__pole_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pole_pic
+msgid "Pole Pic"
+msgstr " صورة العمود"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Pole Type (Height):"
+msgstr "نوع العمود (ارتفاع)"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Pole and Pole Foundation"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Pole and Pole Foundation Physical inspection"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__product_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__product_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__product_ids
+msgid "Product"
+msgstr "المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__product_info_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__product_info_ids
+msgid "Product Info"
+msgstr "معلومات المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Project Descriptions:"
+msgstr "أوصاف المشروع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__ptz_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__ptz_camera
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__ptz_camera
+msgid "Ptz Camera"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__ptz_contactor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__ptz_contactor_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__ptz_contactor_name
+msgid "Ptz Contactor Name"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__ptz_site_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__ptz_site_name
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__ptz_site_name
+msgid "Ptz Site Name"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__qty
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__receive_qty
+msgid "Receive Qty"
+msgstr "الكمبية المستلمة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__received_id
+msgid "Received"
+msgstr "تم الإستلام"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__ref_name
+msgid "Reference Name"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_success_ir_ui_view
+#: model_terms:website.page,arch_db:helpdesk_customization.ticket_success
+msgid "Regards,"
+msgstr "مع تحياتي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__sites_region
+msgid "Region"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Region:"
+msgstr "المنطقة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__remarks
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__remarks
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields.selection,name:helpdesk_customization.selection__helpdesk_parts_line__type__remove
+msgid "Remove"
+msgstr "إزالة"
+
+#. module: helpdesk_customization
+#: model:ir.ui.menu,name:helpdesk_customization.menu_p_reports
+msgid "Reporting"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__request_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__request_id
+msgid "Request"
+msgstr "طلب"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_requirements__requirement
+msgid "Requirement"
+msgstr "المتطلبات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__requirement
+msgid "Requirements"
+msgstr "المتطلبات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__requirements_line_me_id
+msgid "Requirements Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__requirements_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__requirements_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__requirements_lines
+msgid "Requirements Lines"
+msgstr "خطوط المتطلبات"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__review_stage
+msgid "Revision Stage"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Serial No"
+msgstr "الرقم التسلسلي"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__material_serial_number
+msgid "Serial Number"
+msgstr "الرقم التسلسلي"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_location__site_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__site_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Site"
+msgstr "الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Site A:"
+msgstr "الموقع أ"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_assigned_to
+msgid "Site Assigned To Date"
+msgstr "موقع معين حتى تاريخه"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Site B:"
+msgstr "الموقع ب"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+msgid "Site Category"
+msgstr "فئة الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Site Client Approval"
+msgstr "موافقة العميل على الموقع"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_site_client
+msgid "Site Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_site_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_site_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_site_client_approved
+msgid "Site Client Approved"
+msgstr "تمت الموافقة على عميل الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_code
+msgid "Site Code"
+msgstr "رمز الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_contactor
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_contactor
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_contactor
+msgid "Site Contactor"
+msgstr "مقاول الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Site Contactor Approval"
+msgstr "موافقة مقاول الموقع"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_site_contractor
+msgid "Site Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_site_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_site_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_site_contractor_approved
+msgid "Site Contractor Approved"
+msgstr "وافق مقاول الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Site Coordinates:"
+msgstr "إحداثيات الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.site_group_action
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_group
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__site_group_id
+#: model:ir.ui.menu,name:helpdesk_customization.menu_site_group
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_group_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_group_view_tree
+msgid "Site Group"
+msgstr "مجموعة المواقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__site_ins
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__site_ins
+msgid "Site Inspection"
+msgstr "فحص الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__site_line_me_id
+msgid "Site Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_lines
+msgid "Site Lines"
+msgstr "خطوط الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__maintenance_equipment_id
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+msgid "Site Name"
+msgstr " اسم الموقع "
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Site Name:"
+msgstr " اسم الموقع "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_no
+msgid "Site Number"
+msgstr "  رقم الموقع "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__site_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__site_pic
+msgid "Site Pic"
+msgstr "  صورة الموقع "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_site
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_site
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_site
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Site Power"
+msgstr "طاقة الموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid ""
+"Site Power System Physical Inspection (Solar Panels, Solar Energy System, Batteries and SECO\n"
+"                                        Cabinet)"
+msgstr ""
+"الفحص الفيزيائي لنظام الطاقة بالموقع (الألواح الشمسية ، نظام الطاقة الشمسية "
+"، البطاريات وخزانة SECO)"
+
+#. module: helpdesk_customization
+#: model:ir.actions.act_window,name:helpdesk_customization.site_type_action
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__site_type_id
+#: model:ir.ui.menu,name:helpdesk_customization.menu_site_type
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_requirements_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.attenuation_test_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.contact_name_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.contact_name_view_tree
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.optical_test_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_type_view_form
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.site_type_view_tree
+msgid "Site Type"
+msgstr "نوع الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_material_line__item_status
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__ck_status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة /nمتأخر: تاريخ الاستحقاق فات بالفعل/nاليوم: تاريخ "
+"النشاط هو اليوم/nمخطط لها: الأنشطة المستقبلية."
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid "Submit"
+msgstr "يقدم"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_submit_form_new
+msgid "Submit a Ticket"
+msgstr "تاكيد التذكرة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_success_ir_ui_view
+#: model_terms:website.page,arch_db:helpdesk_customization.ticket_success
+msgid "Success!"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Take photo evidence and detailed notes of any deficiencies found"
+msgstr "خذ أدلة مصورة وملاحظات مفصلة عن أي أوجه قصور تم العثور عليها"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_attenuation_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_battery_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_camera_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_civil_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_fibre_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__ticket_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__ticket_ids
+#: model:ir.model.fields,field_description:helpdesk_customization.field_outdoor_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_pole_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_requirements_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_site_line__ticket_id
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__ticket_id
+msgid "Ticket"
+msgstr "التذكرة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__cm_ref
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__pm_ref
+msgid "Ticket Reference"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+msgid "Ticket Type"
+msgstr "نوع التذكرة "
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__transfer_id
+msgid "Transfer"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__type
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Type"
+msgstr "النوع"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_parts_line__uom_id
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields.selection,name:helpdesk_customization.selection__material_line__item_status__used
+msgid "Used"
+msgstr "مستخدم"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_petrolling_site__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Validate"
+msgstr "تحقق"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_alarm_type__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,help:helpdesk_customization.field_alarm_type__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ الاتصال بالموقع"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Wireless Client Approval"
+msgstr "موافقة شبكة العميل اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_wireless_client
+msgid "Wireless Client Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_wireless_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_wireless_client_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_wireless_client_approved
+msgid "Wireless Client Approved"
+msgstr "تمت الموافقة على شبكة العميل اللاسلكية"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+msgid "Wireless Contactor Approval"
+msgstr "اعتماد شبكة المقاول اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:res.groups,name:helpdesk_customization.group_wireless_contractor
+msgid "Wireless Contractor Approve"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_wireless_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_wireless_contractor_approved
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_wireless_contractor_approved
+msgid "Wireless Contractor Approved"
+msgstr "تمت الموافقة على شبكة المقاول اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_wireless_line__wireless_line_me_id
+msgid "Wireless Line Me"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_lines
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_lines
+msgid "Wireless Lines"
+msgstr " خطوط الشبكة اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__wireless_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__wireless_pic
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__wireless_pic
+msgid "Wireless Pic"
+msgstr "صورة الشبكة اللاسلكية"
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_helpdesk_ticket__is_wireless
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__is_wireless
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_request__is_wireless
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.helpdesk_ticket_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_equipment_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_helpdesk_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_maintenance_document_inh
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.report_request_document_inh
+msgid "Wireless System"
+msgstr "نظام الشبكة اللاسليكة"
+
+#. module: helpdesk_customization
+#: model_terms:ir.ui.view,arch_db:helpdesk_customization.ticket_success_ir_ui_view
+#: model_terms:website.page,arch_db:helpdesk_customization.ticket_success
+msgid "Your Ticket Is created Successfully.<br/>"
+msgstr "تم إنشاء تذكرتك بنجاح"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_attenuation_line
+msgid "attenuation.line"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_attenuation_requirements
+msgid "attenuation.requirements"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_attenuation_test
+msgid "attenuation.test"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_battery_line
+msgid "battery.line"
+msgstr "خط البطارية"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_camera_line
+msgid "camera.line"
+msgstr "خط الكاميرا"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_civil_line
+msgid "civil.line"
+msgstr "الخط المدني"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_contact_name
+msgid "contact.name"
+msgstr "اسم جهة الاتصال"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_fibre_line
+msgid "fibre.line"
+msgstr "خط الألياف البصرية"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_helpdesk_parts_line
+msgid "helpdesk.parts.line"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model.fields,field_description:helpdesk_customization.field_maintenance_equipment__longitude
+msgid "longitude"
+msgstr "خط الطول"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_maintenance_location
+msgid "maintenance.location"
+msgstr "موقع الصيانة"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_material_line
+msgid "material.line"
+msgstr "خط المواد"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_optical_test
+msgid "optical.test"
+msgstr "اختبار بصري"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_outdoor_line
+msgid "outdoor.line"
+msgstr " خطوط خارجية"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_petrolling_site
+msgid "petrolling.site"
+msgstr "موقع البترول"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_petrolling_site_line
+msgid "petrolling.site.line"
+msgstr "خط موقع البترول"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_pole_line
+msgid "pole.line"
+msgstr "خط العمود"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_product_brand
+msgid "product.brand"
+msgstr ""
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_product_model
+msgid "product.model"
+msgstr "موديل المنتج"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_requirements_line
+msgid "requirements.line"
+msgstr "خط متطلبات"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_site_group
+msgid "site.group"
+msgstr "مجموعة المواقع"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_site_line
+msgid "site.line"
+msgstr "خط الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_site_type
+msgid "site.type"
+msgstr "نوع الموقع"
+
+#. module: helpdesk_customization
+#: model:ir.model,name:helpdesk_customization.model_wireless_line
+msgid "wireless.line"
+msgstr "خط الشبكة اللاسلكية"
+
+#. module: maintenance
+#: model:ir.actions.act_window,name:maintenance.hr_equipment_action
+#: model:ir.ui.menu,name:maintenance.menu_equipment_form
+msgid "Sites"
+msgstr "المواقع"
